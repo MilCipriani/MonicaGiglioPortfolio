@@ -24,7 +24,7 @@ const items = ref([
                 <span style="margin-left: 1rem;">MONICA GIGLIO</span>
             </template>
             <template #item="{ item, props, hasSubmenu, root }">
-                <a v-ripple class="flex items-center" v-bind="props.action">
+                <a class="flex items-center" v-bind="props.action">
                     <img v-if="item.icon" :src="item.icon" alt="Italian icon">
                     <span>{{ item.label }}</span>
                 </a>
