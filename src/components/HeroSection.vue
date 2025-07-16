@@ -1,4 +1,4 @@
-<script setup>
+<script setup lang="ts">
 import logo from '@/assets/logo.svg';
 </script>
 
@@ -65,11 +65,10 @@ import logo from '@/assets/logo.svg';
   text-align: center;
 }
 
-/* Mobile responsiveness */
 @media (max-width: 768px) {
   .hero-section {
-    height: 70vh; /* Shrink height on mobile */
-    max-height: 600px; /* Smaller max height on mobile */
+    height: 70vh; 
+    max-height: 600px;
   }
   
   .content-overlay {

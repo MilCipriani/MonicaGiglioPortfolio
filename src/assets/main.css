@@ -5,6 +5,16 @@
   font-weight: normal;
 }
 
+.p-button{
+  --p-button-padding-x: 2rem;
+  --p-button-padding-y: 1.5rem;
+  --p-button-rounded-border-radius: 10rem;
+
+  --p-button-primary-background: var(--turquoise);
+  --p-button-primary-border-color: var(--turquoise);
+  --p-button-primary-hover-background: var(--turqouise-hover);
+  --p-button-primary-hover-border-color: var(--turqouise-hover);
+}
 /*
 #app {
   max-width: 1280px;
