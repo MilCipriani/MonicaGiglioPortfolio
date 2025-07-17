@@ -65,7 +65,7 @@ import logo from '@/assets/logo.svg';
   text-align: center;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 950px) {
   .hero-section {
     height: 70vh; 
     max-height: 600px;
@@ -85,6 +85,8 @@ import logo from '@/assets/logo.svg';
   }
 }
 
+
+/*
 @media (max-width: 480px) {
   .hero-section {
     height: 60vh; 
@@ -104,4 +106,6 @@ import logo from '@/assets/logo.svg';
     font-size: 1.2rem;
   }
 }
+*/
+
 </style>

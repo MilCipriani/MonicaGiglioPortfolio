@@ -14,8 +14,11 @@ import Divider from 'primevue/divider';
             <img src="@/assets/profilePicSquared.jpg" alt="Portrait">
             <div class="text">
                 <h2>Sono Monica Giglio e mi occupo di naturopatia e discipline olistiche da circa 25 anni.</h2>
-                <p>Il mio obbiettivo é quello di accompagnare attraverso il benessere olistico, la trasformazione personale e l’evoluzione interiore.<br><br>
-                    Sono guidata da una profonda passione per l’equilibrio e la connessione tra mente, corpo e spirito.</p>
+                <p>
+                    Il mio obbiettivo é quello di accompagnare attraverso il benessere olistico, la trasformazione personale e l’evoluzione interiore.
+                    <br><br>
+                    Sono guidata da una profonda passione per l’equilibrio e la connessione tra mente, corpo e spirito.
+                </p>
                 <Button rounded>SCARICA IL MIO CV</Button>
             </div>
         </div>
@@ -39,11 +42,8 @@ import Divider from 'primevue/divider';
 }
 
 .title h1{
-    width: 12rem;
-}
-
-:deep(.p-divider) {
-  --p-divider-border-color: var(--light-blue);
+    white-space: nowrap;
+    padding-right: 2rem;
 }
 
 .content{
@@ -73,20 +73,20 @@ img{
 }
 
 
-@media (max-width: 768px) {
+@media (max-width: 950px) {
     .content {
         flex-direction: column;
         gap: 5rem;
     }
 
     .text {
-        width: 16rem;
+        width: 30rem;
         gap: 3rem;
     }
 
     img {
-        width: 15rem;
-        height: 15rem;
+        width: 20rem;
+        height: 20rem;
     }
 }
 

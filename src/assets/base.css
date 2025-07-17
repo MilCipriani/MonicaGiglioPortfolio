@@ -18,6 +18,18 @@
   --color-text: var(--blue)
 }
 
+body{
+  overflow-x: hidden;
+
+}
+
+::-webkit-scrollbar {
+    display: none;
+}
+
+html {
+    scrollbar-width: none;
+}
 /* dark theme
 @media (prefers-color-scheme: dark) {
   :root {
