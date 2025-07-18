@@ -19,6 +19,10 @@
 .p-divider {
   --p-divider-border-color: var(--light-blue);
 }
+
+h2{
+  font-weight: normal;
+}
 /*
 #app {
   max-width: 1280px;

@@ -3,6 +3,7 @@ import NavBar from './components/NavBar.vue'
 import HeroSection from './components/HeroSection.vue';
 import AboutSection from './components/AboutSection.vue';
 import HistorySection from './components/HistorySection.vue';
+import BannerSection from './components/BannerSection.vue';
 
 </script>
 
@@ -12,6 +13,7 @@ import HistorySection from './components/HistorySection.vue';
     <HeroSection></HeroSection>
     <AboutSection></AboutSection>
     <HistorySection></HistorySection>
+    <BannerSection></BannerSection>
   </main>
 </template>
 
