@@ -131,7 +131,7 @@ const getSeverity = (status: Product['tag']): 'info' | 'warn' | 'null' => {
     gap: 5rem;
     padding: 5rem 4rem;
     --p-carousel-indicator-active-background: var(--blue);
-    --p-carousel-indicator-focus-ring-color: var(--white);
+    --p-carousel-indicator-background: var(--light-blue);
 }
 
 .title{
@@ -186,10 +186,6 @@ img{
 
 .tag {
     border-radius: 100rem;
-}
-
-:deep( .p-carousel-indicator-button	){
-    background-color: var(--light-blue);
 }
 
 </style>
