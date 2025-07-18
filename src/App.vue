@@ -6,6 +6,7 @@ import HistorySection from './components/HistorySection.vue';
 import BannerSection from './components/BannerSection.vue';
 import ServicesSection from './components/ServicesSection.vue';
 import CollaborationsSection from './components/CollaborationsSection.vue';
+import CoursesSection from './components/CoursesSection.vue';
 
 </script>
 
@@ -18,6 +19,7 @@ import CollaborationsSection from './components/CollaborationsSection.vue';
     <BannerSection></BannerSection>
     <ServicesSection></ServicesSection>
     <CollaborationsSection></CollaborationsSection>
+    <CoursesSection></CoursesSection>
   </main>
 </template>
 
