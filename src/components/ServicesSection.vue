@@ -1,9 +1,10 @@
 <script setup lang="ts">
-import { ref, onMounted } from "vue";
+import { ref } from "vue";
 
 import Carousel from 'primevue/carousel';
 import Button from 'primevue/button';
 import Tag from 'primevue/tag';
+import Divider from 'primevue/divider';
 
 import soul from '@/assets/soulCoach.jpg';
 import LumEss from '@/assets/luminosaEssenza.jpg';
@@ -12,8 +13,21 @@ import metamorfica from '@/assets/metamorfica.jpg';
 import albero from '@/assets/albero.jpg';
 import RiflPlant from '@/assets/riflessologiaPlantareOrganica.jpg';
 
+interface Product {
+    id: number;
+    name: string;
+    tag: 'Online' | 'In sede' | string;
+    image: string;
+    text: string;
+}
 
-const products = ref([
+interface ResponsiveOption {
+    breakpoint: string;
+    numVisible: number;
+    numScroll: number;
+}
+
+const products = ref<Product[]>([
     {
         id: 1,
         name: "SOUL COACHING",
@@ -58,7 +72,7 @@ const products = ref([
     },
 ]);
 
-const responsiveOptions = ref([
+const responsiveOptions = ref<ResponsiveOption[]>([
     {
         breakpoint: '1400px',
         numVisible: 2,
@@ -72,7 +86,7 @@ const responsiveOptions = ref([
 
 ]);
 
-const getSeverity = (status:string) => {
+const getSeverity = (status: Product['tag']): 'info' | 'warn' | 'null' => {
     switch (status) {
         case 'Online':
             return 'info';
@@ -81,13 +95,17 @@ const getSeverity = (status:string) => {
             return 'warn';
 
         default:
-            return 'secondary';
+            return 'null';
     }
 };
 </script>
 
 <template>
     <div class="section">
+        <div class="title">
+            <h1>SERVIZI</h1>
+            <Divider></Divider>
+        </div>
         <Carousel :value="products" :numVisible="3" :numScroll="1" :responsiveOptions="responsiveOptions">
             <template #item="slotProps">
                 <div class="card">
@@ -108,9 +126,23 @@ const getSeverity = (status:string) => {
 <style scoped>
 
 .section{
+    display: flex;
+    flex-direction: column;
+    gap: 5rem;
     padding: 5rem 4rem;
     --p-carousel-indicator-active-background: var(--blue);
     --p-carousel-indicator-focus-ring-color: var(--white);
+}
+
+.title{
+    width: 100%;
+    display: flex;
+    color: var(--light-blue);
+}
+
+.title h1{
+    white-space: nowrap;
+    padding-right: 2rem;
 }
 
 .card{
@@ -122,6 +154,7 @@ const getSeverity = (status:string) => {
     justify-content: center;
     width: 22.5rem;
     gap: 2rem;
+    margin-bottom: 3rem;
 }
 
 h2 {
