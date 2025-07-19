@@ -5,17 +5,26 @@
 #app {
   margin: 0;
   font-weight: normal;
+  overflow-x: hidden;
 }
 
 .p-button{
   --p-button-padding-x: 2rem;
   --p-button-padding-y: 1.5rem;
   --p-button-rounded-border-radius: 10rem;
+  --p-button-lg-font-size: 2rem;
 
   --p-button-primary-background: var(--turquoise);
   --p-button-primary-border-color: var(--turquoise);
   --p-button-primary-hover-background: var(--turqouise-hover);
   --p-button-primary-hover-border-color: var(--turqouise-hover);
+
+  --p-button-secondary-background: var(--blue);
+  --p-button-secondary-border-color: var(--blue);
+  --p-button-secondary-hover-background: var(--blue-hover);
+  --p-button-secondary-hover-border-color: var(--blue-hover);
+  --p-button-secondary-color: var(--white);
+  --p-button-secondary-hover-color: var(--white);
 }
 
 .p-divider {

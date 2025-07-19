@@ -26,6 +26,7 @@ import logo from '@/assets/logo.svg';
   position: relative;
   width: 100%;
   height: 100vh;
+  margin-top: 8rem;
   overflow: hidden;
   max-height: 960px;
 }
@@ -67,7 +68,6 @@ import logo from '@/assets/logo.svg';
 
 @media (max-width: 950px) {
   .hero-section {
-    height: 70vh; 
     max-height: 600px;
   }
   
@@ -84,28 +84,5 @@ import logo from '@/assets/logo.svg';
     font-size: 1.5rem;
   }
 }
-
-
-/*
-@media (max-width: 480px) {
-  .hero-section {
-    height: 60vh; 
-    max-height: 500px;
-  }
-
-  .content-overlay {
-    gap: 15rem;
-  }  
-
-  .logo {
-    width: 8rem;
-    height: 8rem;
-  }
-  
-  .tagline {
-    font-size: 1.2rem;
-  }
-}
-*/
 
 </style>

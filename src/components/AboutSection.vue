@@ -27,7 +27,8 @@ import Divider from 'primevue/divider';
 
 <style scoped>
 .section{
-    padding: 5rem 4rem;
+    height: 100vh;
+    padding: 8rem 4rem 5rem 4rem;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -74,21 +75,33 @@ img{
 
 
 @media (max-width: 950px) {
+    .section {
+        gap: 1rem;
+    }
     .content {
         flex-direction: column;
-        gap: 5rem;
+        gap: 3rem;
     }
-
     .text {
         width: 30rem;
         gap: 3rem;
     }
-
     img {
-        width: 20rem;
-        height: 20rem;
+        width: 15rem;
+        height: 15rem;
     }
 }
 
+@media (max-width: 768px) {
+    .section {
+        padding: 8rem 2rem 5rem 2rem;
+    }
+    .content {
+        gap: 2rem;
+    }
+    .text {
+        width: 25rem;
+    }
+}
 
 </style>

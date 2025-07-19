@@ -129,7 +129,7 @@ const getSeverity = (status: Product['tag']): 'info' | 'warn' | 'null' => {
     display: flex;
     flex-direction: column;
     gap: 5rem;
-    padding: 5rem 4rem;
+    padding: 8rem 4rem 5rem 4rem;
     --p-carousel-indicator-active-background: var(--blue);
     --p-carousel-indicator-background: var(--light-blue);
 }
@@ -138,6 +138,7 @@ const getSeverity = (status: Product['tag']): 'info' | 'warn' | 'null' => {
     width: 100%;
     display: flex;
     color: var(--light-blue);
+    padding: 0 2rem;
 }
 
 .title h1{
@@ -148,11 +149,13 @@ const getSeverity = (status: Product['tag']): 'info' | 'warn' | 'null' => {
 .card{
     align-self: center;
     justify-self: center;
+
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    width: 22.5rem;
+
+    width: 100%;
     gap: 2rem;
     margin-bottom: 3rem;
 }
@@ -164,6 +167,7 @@ h2 {
 
 p {
     text-align: justify;
+    max-width: 23rem;
 }
 
 .image-container {
@@ -188,4 +192,21 @@ img{
     border-radius: 100rem;
 }
 
+
+@media (max-width:950px) {
+    .section {
+        padding: 8rem 1rem 5rem 1rem;
+
+    }
+    .card p {
+        width: 20rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .section {
+        padding: 8rem 0 5rem 0;
+
+    }
+}
 </style>

@@ -81,13 +81,13 @@ const responsiveOptions = ref<ResponsiveOption[]>([
             <Divider></Divider>
         </div>
         <div class="text">
-            <h1>Credo nella forza della sinergia</h1>
-            <h2>Per questo collaboro con altri professionisti della salute, offrendo un approccio integrato e personalizzato al benessere.</h2>            
+            <h2>Credo nella forza della sinergia</h2>
+            <h3>Per questo collaboro con altri professionisti della salute, offrendo un approccio integrato e personalizzato al benessere.</h3>            
         </div>
         <Carousel :value="products" :numVisible="3" :numScroll="1" :responsiveOptions="responsiveOptions">
             <template #item="slotProps">
                 <div class="card">
-                    <h2 style="text-transform: uppercase;">{{ slotProps.data.name }}</h2>
+                    <h3 style="text-transform: uppercase;">{{ slotProps.data.name }}</h3>
                     <div class="image-container">
                         <img :src="slotProps.data.image" :alt="slotProps.data.name"/>
                         <Button icon="pi pi-arrow-right" size="large" rounded class="button"></Button>
@@ -105,8 +105,8 @@ const responsiveOptions = ref<ResponsiveOption[]>([
 .section{
     display: flex;
     flex-direction: column;
-    gap: 5rem;
-    padding: 5rem 4rem;
+    gap: 3rem;
+    padding: 8rem 4rem 5rem 4rem;
     --p-carousel-indicator-active-background: var(--blue);
     --p-carousel-indicator-background: var(--light-blue);
 
@@ -135,8 +135,13 @@ const responsiveOptions = ref<ResponsiveOption[]>([
 }
 
 .text h2{
-    margin: 2rem auto;
+    margin: 1rem auto;
     width: 30rem;
+}
+
+.text h3 {
+    max-width: 45rem;
+    text-align: center;
 }
 
 .card{
@@ -165,8 +170,8 @@ p {
 
 img{
     border-radius: 100%;
-    width: 20rem;
-    height: 20rem;
+    width: 15rem;
+    height: 15rem;
     border: 1rem solid var(--light-blue);
     object-fit: cover;
 }
@@ -181,4 +186,24 @@ img{
     border-radius: 100rem;
 }
 
+
+@media (max-width:950px) {
+    .section {
+        padding: 0rem 1rem 5rem 1rem;
+
+    }
+    .title {
+        padding: 0 2rem;
+    }
+    .card p {
+        width: 20rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .section {
+        padding: 8rem 0 5rem 0;
+
+    }
+}
 </style>

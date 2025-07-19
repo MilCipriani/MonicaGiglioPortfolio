@@ -108,8 +108,9 @@ const getSeverity = (status: Product['location']): 'info' | 'warn' => {
 .section{
     display: flex;
     flex-direction: column;
+    height: 100vh;
     gap: 5rem;
-    padding: 5rem 4rem;
+    padding: 8rem 4rem 5rem 4rem;
     --p-carousel-indicator-active-background: var(--blue);
     --p-carousel-indicator-background: var(--white);
     --p-carousel-indicator-list-padding: 4rem 0 0 0;
@@ -204,5 +205,25 @@ p {
     width: 50%;
     gap: 1rem;
     margin-left: auto;
+    padding-left: 1rem;
+}
+
+
+@media (max-width:950px) {
+    .section {
+        padding: 0rem 1rem 5rem 1rem;
+    }
+    .title {
+        padding: 0 2rem;
+    }
+    .card p {
+        width: 20rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .section {
+        padding: 8rem 0 5rem 0;
+    }
 }
 </style>

@@ -197,7 +197,7 @@ const items = ref<TimelineItem[]>([
 }
 
 .milestone{
-    margin: 5rem 0;
+    margin-bottom: 5rem;
     display: grid;
     gap: 4rem;
     grid-template-columns: 1fr 1fr 1fr;
@@ -248,11 +248,16 @@ const items = ref<TimelineItem[]>([
 
 
 @media (max-width:950px) {
+    .section {
+        gap: 1rem;
+    }
     .milestone{
         display: flex;
         flex-direction: column;
         align-items: center;
         justify-content: center;
+        margin-bottom: 3rem;
+        gap: 2rem;
     }
 
     .milestone.left{
@@ -261,7 +266,40 @@ const items = ref<TimelineItem[]>([
         align-items: center;
         justify-content: center;
     }
+    .geometry2 {
+        width: 15rem;
+        height: 15rem;
+        right: -10rem;
+    }
+    .geometry3 {
+        width: 30rem;
+        height: 30rem;
+        top: 60rem;
+        left: -25rem;
+    }
+    .geometry6 {
+        width: 40rem;
+        height: 40rem;
+        bottom: -30rem;
+        right: -25rem;
+    }
 }
 
-
+@media (max-width: 768px) {
+    .section {
+        padding: 0rem 2rem 5rem 2rem;
+    }
+    .content {
+        gap: 2rem;
+    }
+    .text {
+        width: 25rem;
+    }
+    .geometry3 {
+        width: 30rem;
+        height: 30rem;
+        top: 50rem;
+        left: -25rem;
+    }
+}
 </style>

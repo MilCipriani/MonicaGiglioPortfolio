@@ -7,6 +7,7 @@ import BannerSection from './components/BannerSection.vue';
 import ServicesSection from './components/ServicesSection.vue';
 import CollaborationsSection from './components/CollaborationsSection.vue';
 import CoursesSection from './components/CoursesSection.vue';
+import ContactsSection from './components/ContactsSection.vue';
 
 </script>
 
@@ -18,11 +19,24 @@ import CoursesSection from './components/CoursesSection.vue';
     <HistorySection></HistorySection>
     <BannerSection></BannerSection>
     <ServicesSection></ServicesSection>
-    <CollaborationsSection></CollaborationsSection>
-    <CoursesSection></CoursesSection>
+    <div class="collab-wrapper">
+      <CollaborationsSection></CollaborationsSection>
+    </div>
+    
+    <div class="courses-wrapper">
+      <CoursesSection></CoursesSection>
+    </div>
+    <ContactsSection></ContactsSection>
   </main>
 </template>
 
 <style scoped>
-
+.collab-wrapper {
+  position: relative;
+  z-index: 1;
+}
+.courses-wrapper {
+  margin-top: -4.5rem;
+  position: relative;
+}
 </style>

@@ -7,44 +7,19 @@
   --white: #f3f3f3;
 
   --turqouise-hover: #17f0ff;
+  --blue-hover: #20a6c7;
 }
 
 /* semantic color variables */
 :root {
   --color-background: var(--white);
-
   --color-border: var(--light-blue);
-
   --color-text: var(--blue)
-}
-
-body{
-  overflow-x: hidden;
-
 }
 
 ::-webkit-scrollbar {
     display: none;
 }
-
-html {
-    scrollbar-width: none;
-}
-/* dark theme
-@media (prefers-color-scheme: dark) {
-  :root {
-    --color-background: var(--vt-c-black);
-    --color-background-soft: var(--vt-c-black-soft);
-    --color-background-mute: var(--vt-c-black-mute);
-
-    --color-border: var(--vt-c-divider-dark-2);
-    --color-border-hover: var(--vt-c-divider-dark-1);
-
-    --color-heading: var(--vt-c-text-dark-1);
-    --color-text: var(--vt-c-text-dark-2);
-  }
-}
-*/
 
 *,
 *::before,
@@ -52,6 +27,26 @@ html {
   box-sizing: border-box;
   margin: 0;
   font-weight: normal;
+}
+
+html {
+  scrollbar-width: none;
+
+}
+
+@media (max-width: 768px) {
+  html {
+    font-size: 14px
+  }
+  h1 {
+    font-size: 1.5rem;
+  }
+  h2 {
+    font-size: 1.3rem;
+  }
+  h3 {
+    font-size: 1.1rem;
+  }
 }
 
 body {
@@ -75,8 +70,15 @@ body {
     'Droid Sans',
     'Helvetica Neue',
     sans-serif;
-  font-size: 16px;
+  font-size: 1rem;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  overflow-x: hidden;
+
 }
+/*
+* {
+  border: 1px solid red;
+}
+  */

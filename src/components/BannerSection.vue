@@ -8,7 +8,7 @@ import Button from 'primevue/button';
             <h2>Che tu sia all’inizio del tuo cammino o desideri approfondire la tua consapevolezza, sono qui per accompagnarti verso:</h2>
             <h2><em>chiarezza, vitalità e trasformazione.</em></h2>
         </div>
-        <Button rounded style="margin-top: 6rem;">COMINCIAMO!</Button>
+        <Button rounded class="button">COMINCIAMO!</Button>
     </div>
 </template>
 
@@ -24,7 +24,7 @@ import Button from 'primevue/button';
     align-items: center;
     background-image: url(@/assets/gabbiano.jpg);
     background-size: cover;
-    background-position: top right;
+    background-position: top left;
     background-repeat: no-repeat;
 }
 
@@ -40,5 +40,27 @@ h2 {
 
 .text em {
     font-weight: 700;
+}
+
+.button {
+    margin-top: 6rem;
+}
+
+@media (max-width:950px) {
+    .button {
+        margin-top: 3rem;
+        margin-bottom: 2rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .text{
+        width: 100%;
+        margin-top: 5rem;
+    }
+    .button {
+        margin-top: 3rem;
+        margin-bottom: 2rem;
+    }
 }
 </style>
