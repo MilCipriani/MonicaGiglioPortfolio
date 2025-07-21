@@ -156,7 +156,7 @@ const getSeverity = (status: Product['tag']): 'info' | 'warn' | 'null' => {
     justify-content: center;
 
     width: 100%;
-    gap: 2rem;
+    gap: 1rem;
     margin-bottom: 3rem;
 }
 
@@ -195,11 +195,14 @@ img{
 
 @media (max-width:950px) {
     .section {
-        padding: 8rem 1rem 5rem 1rem;
+        padding: 6rem 1rem 3rem 1rem;
 
     }
     .card p {
         width: 20rem;
+    }
+    .card {
+        margin-bottom: 1rem;
     }
 }
 

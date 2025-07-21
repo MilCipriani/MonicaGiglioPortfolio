@@ -17,7 +17,7 @@ import Button from 'primevue/button';
 .section{
     border-radius: 5rem;
     width: 100%;
-    aspect-ratio: 16 / 8;
+    aspect-ratio: 16 / 9;
     display: flex;
     flex-direction: column;
     justify-content: center;

@@ -91,7 +91,7 @@ const getSeverity = (status: Product['location']): 'info' | 'warn' => {
                     <Tag :value="slotProps.data.location" :severity="getSeverity(slotProps.data.location)" class="tag"/>
                     <div class="text">
                         <p class="teachers">{{ slotProps.data.teachers }}</p>
-                        <p>{{ slotProps.data.text }}</p>
+                        <p class="description">{{ slotProps.data.text }}</p>
                     </div>
                     <div class="card-footer">
                         <Button v-if="slotProps.data.flyer" icon="pi pi-download" class="flyer"> LOCANDINA</Button>
@@ -216,7 +216,7 @@ p {
     .title {
         padding: 0 2rem;
     }
-    .card p {
+    .description {
         width: 20rem;
     }
 }
@@ -224,6 +224,13 @@ p {
 @media (max-width: 768px) {
     .section {
         padding: 8rem 0 5rem 0;
+    }
+}
+
+/*rotated phones*/
+@media screen and (orientation: landscape) and (max-height: 500px) {
+    .section {
+        height: auto;
     }
 }
 </style>

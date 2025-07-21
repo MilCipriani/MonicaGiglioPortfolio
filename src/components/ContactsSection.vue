@@ -52,7 +52,7 @@ import Button from 'primevue/button';
 <style scoped>
 .section {
     height: 100vh;
-    padding: 5rem 4rem;
+    padding: 5rem 4rem 0 4rem;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -130,5 +130,12 @@ import Button from 'primevue/button';
     --p-button-secondary-hover-background: var(--blue);
     --p-button-secondary-hover-border-color: var(--blue);
     --p-button-secondary-hover-color: var(--white);    
+}
+
+/*rotated phones*/
+@media screen and (orientation: landscape) and (max-height: 500px) {
+    .section {
+        height: auto;
+    }
 }
 </style>

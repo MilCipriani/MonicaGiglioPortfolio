@@ -71,8 +71,57 @@ const items = ref([
     border-bottom: 1px solid #14508936;
 }
 
+:deep(.p-menubar){
+    color: var(--blue);
+
+}
+
 :deep(.p-menubar-start){
     font-size: 1.5rem;
 }
 
+@media (max-width:950px) {
+    :deep(.p-menubar){
+        justify-content: space-between;
+        --p-menubar-item-focus-color: var(--blue);
+        --p-menubar-item-hover-color: var(--blue);
+    }
+    :deep(.p-menubar-item-content){
+        margin-bottom: 1rem;
+        font-size: 1.5rem;
+    }
+}
+
+@media (max-width: 768px) {
+    :deep(.p-menubar){
+        height: 6rem;
+    }
+    :deep(.p-menubar-item-content){
+        margin-bottom: 1rem;
+        font-size: 1.5rem;
+    }
+    .card {
+        height: 6rem;
+    }
+}
+
+/*rotated phones*/
+@media screen and (orientation: landscape) and (max-height: 500px) {
+    :deep(.p-menubar){
+        height: 6rem;
+    }
+    :deep(.p-menubar-item-content){
+        margin-bottom: 0.5rem;
+        font-size: 1rem;
+    }
+    :deep(.p-menubar-root-list){
+        height: 70vh;
+    }
+    .card {
+        height: 6rem;
+    }
+    h1 {
+        font-size: 2rem;
+    }
+}
 </style>

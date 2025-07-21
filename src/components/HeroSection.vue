@@ -85,4 +85,9 @@ import logo from '@/assets/logo.svg';
   }
 }
 
+@media (max-width: 768px) {
+    .hero-section {
+        margin-top: 6rem;
+    }
+}
 </style>

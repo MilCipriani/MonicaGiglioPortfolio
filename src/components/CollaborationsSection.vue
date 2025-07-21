@@ -103,10 +103,12 @@ const responsiveOptions = ref<ResponsiveOption[]>([
 <style scoped>
 
 .section{
+    height: 100vh;
+
     display: flex;
     flex-direction: column;
     gap: 3rem;
-    padding: 8rem 4rem 5rem 4rem;
+    padding: 5rem 4rem 5rem 4rem;
     --p-carousel-indicator-active-background: var(--blue);
     --p-carousel-indicator-background: var(--light-blue);
 
@@ -152,8 +154,8 @@ const responsiveOptions = ref<ResponsiveOption[]>([
     align-items: center;
     justify-content: center;
     width: 22.5rem;
-    gap: 2rem;
-    margin-bottom: 3rem;
+    gap: 1rem;
+    margin-bottom: 2rem;
 }
 
 h2 {
@@ -162,6 +164,7 @@ h2 {
 
 p {
     text-align: justify;
+    font-weight: 600;
 }
 
 .image-container {
@@ -189,8 +192,7 @@ img{
 
 @media (max-width:950px) {
     .section {
-        padding: 0rem 1rem 5rem 1rem;
-
+        padding: 3rem 1rem 5rem 1rem;
     }
     .title {
         padding: 0 2rem;
@@ -202,8 +204,16 @@ img{
 
 @media (max-width: 768px) {
     .section {
-        padding: 8rem 0 5rem 0;
+        padding: 3rem 0 5rem 0;
+        margin-bottom: 0;
 
+    }
+}
+
+/*rotated phones*/
+@media screen and (orientation: landscape) and (max-height: 500px) {
+    .section {
+        height: auto;
     }
 }
 </style>

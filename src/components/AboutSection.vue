@@ -104,4 +104,10 @@ img{
     }
 }
 
+/*rotated phones*/
+@media screen and (orientation: landscape) and (max-height: 500px) {
+    .section {
+        height: auto;
+    }
+}
 </style>
