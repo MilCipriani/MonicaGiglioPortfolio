@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { ref } from "vue";
+import { computed } from "vue";
 import Divider from 'primevue/divider';
 import img1 from '@/assets/RadiciVocazione.jpg';
 import img2 from '@/assets/Ayurveda.jpg';
@@ -8,6 +8,9 @@ import img4 from '@/assets/Maiorca.jpg';
 import img5 from '@/assets/Riconoscimenti.jpg';
 import img6 from '@/assets/Oggi.jpg';
 import geometry from '@/assets/Geometry.svg';
+import { useLanguage } from '@/translations/index';
+
+const { t } = useLanguage();
 
 type Alignment = "left" | "right"
 
@@ -20,37 +23,37 @@ interface TimelineItem {
   isLogo?: boolean;
 }
 
-const items = ref<TimelineItem[]>([
-    { h1: 'Le radici della mia vocazione',
-        p: 'La mia passione nasce fin da bambina, ispirata dall’amore di mio padre per la medicina. Crescendo, mi avvicino alle discipline olistiche, che mi offrono una nuova visione della salute: una visione che cerca la causa, non solo il sintomo. Questo mi porta a studiare psicosomatica e antropologia.',
+const items = computed(() =>[
+    { h1: t('sections.historySection.milestone1.h1'),
+        p: t('sections.historySection.milestone1.p'),
         img: img1,
         class: "right",
         geometry: 1
     },
-    { h1: 'Il cammino nella naturopatia e nell’ayurveda',
-        p: 'Mi iscrivo a una scuola di naturopatia e, dopo tre anni di studio e due master, scopro una nuova passione: la medicina ayurvedica. Anni di formazione come operatrice ayurvedica e tanta pratica sul campo mi trasformano in uno strumento al servizio del benessere altrui.',
+    { h1: t('sections.historySection.milestone2.h1'),
+        p: t('sections.historySection.milestone2.p'),
         img: img2,
         class: 'left'
     },
-    { h1: 'Evoluzione personale e nascita di In Lumine',
-        p: 'Parallelamente alla mia formazione professionale, porto avanti un profondo percorso personale. In questo processo nasce il sogno di In Lumine: un centro di formazione, consapevolezza ed evoluzione interiore. Il mio obiettivo è creare uno spazio dedicato alla trasformazione, dove corpo, mente e spirito possano ritrovare equilibrio.',
+    { h1: t('sections.historySection.milestone3.h1'),
+        p: t('sections.historySection.milestone3.p'),
         img: img3,
         class: "right",
         isLogo: true
     },
-    { h1: 'La svolta: Maiorca e nuovi strumenti',
-        p: 'Nel 2011, una profonda crisi mi spinge a cambiare tutto. Scelgo di trasferirmi a Maiorca, luogo che ho sempre sentito come casa. Qui riscopro la natura, il tempo, la spiritualità. Continuo a formarmi con nuovi strumenti come la Bioneuroemozione, la biodescodificazione dell’albero genealogico e l’epigenetica.',
+    { h1: t('sections.historySection.milestone4.h1'),
+        p: t('sections.historySection.milestone4.p'),
         img: img4,
         class: "left",
         geometry: 4
     },
-    { h1: 'Collaborazioni e riconoscimenti',
-        p: 'Negli anni, inizio a collaborare con medici e professionisti delle terapie olistiche tra Italia e Spagna. Dal 2022 faccio parte del team della Dott.ssa Monica Greco come Coach A.M.A. e dal 2024 sono docente presso la sua Accademia di Naturopatia Scientifica del Terreno. Nel 2023, con l’accreditamento all’Associazione Professionale Spagnola di Naturopatia e Bioterapia, nasce ufficialmente il Centro di Formazione In Lumine.',
+    { h1: t('sections.historySection.milestone5.h1'),
+        p: t('sections.historySection.milestone5.p'),
         img: img5,
         class: "right"
     },
-    { h1: 'Oggi',
-        p: 'Il mio viaggio interiore continua. Oggi mi sento una persona completa, realizzata, al servizio di me stessa e degli altri, come Soul Coach. Accompagno le anime verso il loro benessere fisico, emotivo e spirituale con un metodo personale costruito negli anni attraverso esperienze, studio e pratica.',
+    { h1: t('sections.historySection.milestone6.h1'),
+        p: t('sections.historySection.milestone6.p'),
         img: img6,
         class: "left"
     }
@@ -58,9 +61,9 @@ const items = ref<TimelineItem[]>([
 </script>
 
 <template>
-    <div class="section">
+    <div class="section" id="history">
         <div class="title">
-            <h1>LA MIA STORIA</h1>
+            <h1>{{ t('sections.historySection.title') }}</h1>
             <Divider></Divider>
         </div>
 
@@ -119,7 +122,7 @@ const items = ref<TimelineItem[]>([
 <style scoped>
 
 .section{
-    padding: 5rem 4rem;
+    padding: 9rem 4rem 5rem 4rem;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -208,6 +211,7 @@ const items = ref<TimelineItem[]>([
 
 .text h1{
     text-align: center;
+    margin-bottom: 1rem;
 }
 
 .image-container{
@@ -249,7 +253,7 @@ const items = ref<TimelineItem[]>([
 
 @media (max-width:950px) {
     .section {
-        gap: 1rem;
+        gap: 2rem;
     }
     .milestone{
         display: flex;
@@ -287,7 +291,10 @@ const items = ref<TimelineItem[]>([
 
 @media (max-width: 768px) {
     .section {
-        padding: 0rem 2rem 5rem 2rem;
+        padding: 7rem 2rem 5rem 2rem;
+    }
+    .milestone {
+        gap: 1rem;
     }
     .content {
         gap: 2rem;

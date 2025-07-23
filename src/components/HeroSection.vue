@@ -1,5 +1,8 @@
 <script setup lang="ts">
 import logo from '@/assets/logo.svg';
+import { useLanguage } from '@/translations/index';
+
+const { t } = useLanguage();
 </script>
 
 <template>
@@ -11,12 +14,12 @@ import logo from '@/assets/logo.svg';
       loop
       playsinline
     >
-      <source src="@/assets/HeroBackground.mp4" type="video/mp4">
+      <source src="@/assets/FeatherBackground.mp4" type="video/mp4">
     </video>
     
     <div class="content-overlay">
       <img :src="logo" alt="Logo" class="logo"/>
-      <p class="tagline">La guarigione inizia dalla consapevolezza di sé</p>
+      <p class="tagline">{{ t('sections.heroSection.p') }}</p>
     </div>
   </div>
 </template>
@@ -64,9 +67,10 @@ import logo from '@/assets/logo.svg';
   font-size: 2rem;
   color: var(--white);
   text-align: center;
+  font-weight: 300;
 }
 
-@media (max-width: 950px) {
+@media (max-width: 1050px) {
   .hero-section {
     max-height: 600px;
   }

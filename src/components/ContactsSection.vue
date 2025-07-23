@@ -1,20 +1,23 @@
 <script setup lang="ts">
 import Divider from 'primevue/divider';
 import Button from 'primevue/button';
+import { useLanguage } from '@/translations/index';
+
+const { t } = useLanguage();
 </script>
 
 <template>
-  <div class="section">    
+  <div class="section" id="contacts">    
     <div class="title">
-        <h1>CONTATTI</h1>
+        <h1>{{  t('sections.contactsSection.title') }}</h1>
         <Divider></Divider>
     </div>
 
     <div class="content">
         <div class="contacts">
             <div class="text">
-                <h2>CONTATTAMI</h2>
-                <p>Se ti trovi qui il tuo viaggio è giá iniziato. Che sia per XYZ motivo sono disponibile per blah blah</p>
+                <h2>{{  t('sections.contactsSection.h2') }} :</h2>
+                <p>{{  t('sections.contactsSection.p') }}</p>
             </div>
 
             <div class="info">
@@ -36,7 +39,7 @@ import Button from 'primevue/button';
         </div>
         
         <div class="socials">
-            <h2>SEGUIMI:</h2>
+            <h2>{{  t('sections.contactsSection.follow') }} :</h2>
             <div class="social-icons">
                 <Button icon="pi pi-instagram" severity="secondary" rounded size="large"></Button>
                 <Button icon="pi pi-facebook" severity="secondary" rounded size="large"></Button>
@@ -44,7 +47,7 @@ import Button from 'primevue/button';
         </div>
     </div>
     <div class="footer">
-        <p>Privacy, P.IVA, bla bla bla <br>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitati</p>
+        <p>{{  t('sections.contactsSection.allRightsReserved') }}</p>      
     </div>
   </div>
 </template>
@@ -52,11 +55,11 @@ import Button from 'primevue/button';
 <style scoped>
 .section {
     height: 100vh;
-    padding: 5rem 4rem 0 4rem;
+    padding: 9rem 4rem 5rem 4rem;
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: center;
+    justify-content: space-between;
 }
 .title{
     width: 100%;
@@ -112,6 +115,7 @@ import Button from 'primevue/button';
     display: flex;
     flex-direction: column;
     width: 100%;
+    gap: 1rem;
 }
 
 .footer {

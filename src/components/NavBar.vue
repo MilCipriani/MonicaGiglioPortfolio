@@ -1,17 +1,41 @@
 <script setup lang="ts">
-import { ref } from "vue";
+import { computed } from "vue";
 import Menubar from 'primevue/menubar';
 import itIcon from '@/assets/ITicon.svg';
+import esIcon from '@/assets/ESicon.svg';
 import logo from '@/assets/logo.svg';
 
-const items = ref([
-    { label: 'Chi sono'},
-    { label: 'La mia storia'},
-    { label: 'Servizi'},
-    { label: 'Collaborazioni'},
-    { label: 'Corsi',},
-    { label: 'Contatti'},
-    { icon: itIcon },
+import type { SupportedLanguages } from '@/translations/translationTyping.ts';
+import { useLanguage } from '@/translations/index';
+
+const { t, currentLanguage, setLanguage } = useLanguage();
+
+const toggleLanguage = (): void => {
+  const newLanguage: SupportedLanguages = currentLanguage.value === 'it' ? 'es' : 'it';
+  setLanguage(newLanguage);
+  console.log('new lang is set to: ', newLanguage);
+};
+
+const items = computed(() =>[
+    { label: t('nav.about'),
+        href: '#about',
+    },
+    { label: t('nav.history'),
+        href: '#history'
+    },
+    { label: t('nav.services'),
+        href: '#services',
+    },
+    { label: t('nav.collab'),
+        href: '#collab',
+    },
+    { label: t('nav.courses'),
+        href: '#courses',
+    },
+    { label: t('nav.contacts'),
+        href: '#contacts',
+    },
+    { icon: currentLanguage.value === 'it' ? esIcon : itIcon },
 ]);
 </script>
 
@@ -19,12 +43,14 @@ const items = ref([
     <div class="card">
         <Menubar :model="items">
             <template #start>
-                <img :src="logo" alt="Logo" style="width: 5rem; height: 5rem;" />
-                <h1 style="margin-left: 1rem;">MONICA GIGLIO</h1>
+                <a class="start" href="#" >
+                    <img :src="logo" alt="Logo" style="width: 5rem; height: 5rem;"/>
+                    <h1 style="margin-left: 1rem;">MONICA GIGLIO</h1>
+                </a>
             </template>
             <template #item="{ item }">
-                <a class="flex items-center">
-                    <img v-if="item.icon" :src="item.icon" alt="Italian icon" class="lang">
+                <a :href="item.href">
+                    <img v-if="item.icon" :src="item.icon" alt="Italian icon" class="lang" @click="toggleLanguage">
                     <span v-if="item.label">{{ item.label }}</span>
                 </a>
             </template>
@@ -41,6 +67,12 @@ const items = ref([
     left: 0;
     width: 100%;
     z-index: 1000;
+}
+
+.start{
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .lang {
@@ -80,7 +112,7 @@ const items = ref([
     font-size: 1.5rem;
 }
 
-@media (max-width:950px) {
+@media (max-width:960px) {
     :deep(.p-menubar){
         justify-content: space-between;
         --p-menubar-item-focus-color: var(--blue);

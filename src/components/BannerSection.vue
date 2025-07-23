@@ -1,14 +1,17 @@
 <script setup lang="ts">
 import Button from 'primevue/button';
+import { useLanguage } from '@/translations/index';
+
+const { t } = useLanguage();
 </script>
 
 <template>
     <div class="section">
         <div class="text">
-            <h2>Che tu sia all’inizio del tuo cammino o desideri approfondire la tua consapevolezza, sono qui per accompagnarti verso:</h2>
-            <h2><em>chiarezza, vitalità e trasformazione.</em></h2>
+            <h2>{{ t('sections.bannerSection.h1') }}</h2>
+            <h2><em>{{  t('sections.bannerSection.em') }}</em></h2>
         </div>
-        <Button rounded class="button">COMINCIAMO!</Button>
+        <Button rounded :label="t('sections.bannerSection.button')" class="button"></Button>
     </div>
 </template>
 
@@ -26,6 +29,7 @@ import Button from 'primevue/button';
     background-size: cover;
     background-position: top left;
     background-repeat: no-repeat;
+    padding: 0 1rem;
 }
 
 .text{

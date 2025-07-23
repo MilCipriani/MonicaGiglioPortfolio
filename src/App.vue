@@ -9,6 +9,13 @@ import CollaborationsSection from './components/CollaborationsSection.vue';
 import CoursesSection from './components/CoursesSection.vue';
 import ContactsSection from './components/ContactsSection.vue';
 
+import type { SupportedLanguages } from '@/translations/translationTyping.ts';
+import { useLanguage } from './translations/index.ts';
+
+const { setLanguage } = useLanguage();
+const savedLang = localStorage.getItem('preferred-language') as SupportedLanguages;
+const validLanguage: SupportedLanguages = (savedLang === 'it' || savedLang === 'es') ? savedLang : 'it';
+setLanguage(validLanguage);
 </script>
 
 <template>

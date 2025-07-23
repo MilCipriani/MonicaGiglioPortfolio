@@ -1,25 +1,23 @@
 <script setup lang="ts">
 import Button from 'primevue/button';
 import Divider from 'primevue/divider';
+import { useLanguage } from '@/translations/index';
 
+const { t } = useLanguage();
 </script>
 
 <template>
-    <div class="section">
+    <div class="section" id="about">
         <div class="title">
-            <h1>CHI SONO</h1>
+            <h1>{{ t('sections.aboutSection.title') }}</h1>
             <Divider></Divider>
         </div>
         <div class="content">
             <img src="@/assets/profilePicSquared.jpg" alt="Portrait">
             <div class="text">
-                <h2>Sono Monica Giglio e mi occupo di naturopatia e discipline olistiche da circa 25 anni.</h2>
-                <p>
-                    Il mio obbiettivo é quello di accompagnare attraverso il benessere olistico, la trasformazione personale e l’evoluzione interiore.
-                    <br><br>
-                    Sono guidata da una profonda passione per l’equilibrio e la connessione tra mente, corpo e spirito.
-                </p>
-                <Button rounded>SCARICA IL MIO CV</Button>
+                <h2>{{ t('sections.aboutSection.h2') }}</h2>
+                <p>{{ t('sections.aboutSection.p') }}</p>
+                <Button :label="t('sections.aboutSection.button')" rounded icon="pi pi-download"></Button>
             </div>
         </div>
     </div>
@@ -28,7 +26,7 @@ import Divider from 'primevue/divider';
 <style scoped>
 .section{
     height: 100vh;
-    padding: 8rem 4rem 5rem 4rem;
+    padding: 9rem 4rem 5rem 4rem;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -74,7 +72,7 @@ img{
 }
 
 
-@media (max-width: 950px) {
+@media (max-width: 1050px) {
     .section {
         gap: 1rem;
     }
@@ -94,7 +92,7 @@ img{
 
 @media (max-width: 768px) {
     .section {
-        padding: 8rem 2rem 5rem 2rem;
+        padding: 7rem 2rem 5rem 2rem;
     }
     .content {
         gap: 2rem;
@@ -105,9 +103,11 @@ img{
 }
 
 /*rotated phones*/
-@media screen and (orientation: landscape) and (max-height: 500px) {
+@media screen and (orientation: landscape) and (max-height: 1050px) {
     .section {
         height: auto;
+        padding: 9rem 2rem 5rem 2rem;
+
     }
 }
 </style>

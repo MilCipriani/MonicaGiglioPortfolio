@@ -1,10 +1,13 @@
 <script setup lang="ts">
-import { ref } from "vue";
+import { ref, computed } from "vue";
 
 import Carousel from 'primevue/carousel';
 import Button from 'primevue/button';
 import Divider from 'primevue/divider';
 import Tag from 'primevue/tag';
+import { useLanguage } from '@/translations/index';
+
+const { t } = useLanguage();
 
 
 interface Product {
@@ -23,31 +26,32 @@ interface ResponsiveOption {
     numScroll: number;
 }
 
-const products = ref<Product[]>([
+/*When updating courses t('sections.coursesSection.flyerLabel') is the label for the flyer download button if present*/
+const products = computed( () =>[
     {
-        date: '17-18 Ott 2025',
-        name: 'Corso di riflessologia organica',
-        location: 'Rivalta di Torino',
-        teachers: 'Docente Monica Giglio',
-        text: 'In questo corso imparerai come praticare la riflessologia plantare organica in piena autonomia con la massima efficacia. Questo tipo di riflessologia lavora direttamente sugli apparati e non sui meridiani.',
-        duration: '2 incontri',
-        flyer: 'string'
+        date: t('sections.coursesSection.course1.date'),
+        name: t('sections.coursesSection.course1.name'),
+        location: t('sections.coursesSection.course1.location'),
+        teachers: t('sections.coursesSection.course1.teachers'),
+        text: t('sections.coursesSection.course1.text'),
+        duration: t('sections.coursesSection.course1.duration'),
+        flyer: t('sections.coursesSection.flyerLabel')
     },
     {
-        date: '19 Ott 2025',
-        name: 'Corso di tecnica metamorfica ',
-        location: 'Rivalta di Torino',
-        teachers: 'Docente Monica Giglio',
-        text: 'Si complementa perfettamente con le terapie di medicina classica sia con i trattamenti di medicina olistica.',
-        duration: '4 ore'
+        date: t('sections.coursesSection.course2.date'),
+        name: t('sections.coursesSection.course2.name'),
+        location: t('sections.coursesSection.course2.location'),
+        teachers: t('sections.coursesSection.course2.teachers'),
+        text: t('sections.coursesSection.course2.text'),
+        duration: t('sections.coursesSection.course2.duration'),
     },
     {
-        date: '25 - 26 Apr 2026',
-        name: 'Corso Volare Oltre',
-        location: 'Rivalta di Torino',
-        teachers: 'Docenti Monica Giglio, Prisca Zocca e Gloria Damaschi',
-        text: 'Due giorni di seminario intensivo nella profondità di te stesso per ri-conoscerti e trasformare il tuo vissuto in ali per volare oltre.',
-        duration: '2 incontri'
+        date: t('sections.coursesSection.course3.date'),
+        name: t('sections.coursesSection.course3.name'),
+        location: t('sections.coursesSection.course3.location'),
+        teachers: t('sections.coursesSection.course3.teachers'),
+        text: t('sections.coursesSection.course2.text'),
+        duration: t('sections.coursesSection.course3.duration'),
     },
 ]);
 
@@ -76,10 +80,9 @@ const getSeverity = (status: Product['location']): 'info' | 'warn' => {
 </script>
 
 <template>
-    <div class="section">
-        
+    <div class="section" id="courses">
         <div class="title">
-            <h1>CORSI IN PROGRAMMAZIONE</h1>
+            <h1>{{ t('sections.coursesSection.title') }}</h1>
             <Divider class="white-divider"></Divider>
         </div>
 
@@ -88,13 +91,13 @@ const getSeverity = (status: Product['location']): 'info' | 'warn' => {
                 <div class="card">
                     <span class="date"><i class="pi pi-calendar"></i><p>{{ slotProps.data.date }}</p></span>
                     <h2>{{ slotProps.data.name }}</h2>
-                    <Tag :value="slotProps.data.location" :severity="getSeverity(slotProps.data.location)" class="tag"/>
+                    <Tag :value="slotProps.data.location" :severity="getSeverity(slotProps.data.location)" icon="pi pi-map-marker" class="tag"/>
                     <div class="text">
                         <p class="teachers">{{ slotProps.data.teachers }}</p>
                         <p class="description">{{ slotProps.data.text }}</p>
                     </div>
                     <div class="card-footer">
-                        <Button v-if="slotProps.data.flyer" icon="pi pi-download" class="flyer"> LOCANDINA</Button>
+                        <Button v-if="slotProps.data.flyer" icon="pi pi-download" class="flyer" :label="slotProps.data.flyer"></Button>
                         <span class="duration"><i class="pi pi-clock"></i><p>{{ slotProps.data.duration }}</p></span>
                     </div>
                 </div>
@@ -110,7 +113,7 @@ const getSeverity = (status: Product['location']): 'info' | 'warn' => {
     flex-direction: column;
     height: 100vh;
     gap: 5rem;
-    padding: 8rem 4rem 5rem 4rem;
+    padding: 9rem 4rem 5rem 4rem;
     --p-carousel-indicator-active-background: var(--blue);
     --p-carousel-indicator-background: var(--white);
     --p-carousel-indicator-list-padding: 4rem 0 0 0;
@@ -147,7 +150,7 @@ const getSeverity = (status: Product['location']): 'info' | 'warn' => {
     width: 22.5rem;
     height: 100%;
     padding: 1.5rem;
-    margin-bottom: 3rem;
+    margin: 0 auto 3rem auto;
     border: 0.4rem solid var(--light-blue);
     border-radius: 3rem;
     background-color: var(--white);
@@ -211,24 +214,29 @@ p {
 
 @media (max-width:950px) {
     .section {
-        padding: 0rem 1rem 5rem 1rem;
+        padding: 9rem 1rem 5rem 1rem;
     }
     .title {
         padding: 0 2rem;
     }
+    .card{
+        width: 75vw;
+        max-width: 22.5rem;
+    }
     .description {
-        width: 20rem;
+        width: 65vw;
+        max-width: 20rem;
     }
 }
 
 @media (max-width: 768px) {
     .section {
-        padding: 8rem 0 5rem 0;
+        padding: 7rem 0 5rem 0;
     }
 }
 
 /*rotated phones*/
-@media screen and (orientation: landscape) and (max-height: 500px) {
+@media screen and (orientation: landscape) and (max-height: 1050px) {
     .section {
         height: auto;
     }

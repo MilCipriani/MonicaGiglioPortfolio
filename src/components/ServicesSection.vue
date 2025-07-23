@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { ref } from "vue";
+import { ref, computed } from "vue";
 
 import Carousel from 'primevue/carousel';
 import Button from 'primevue/button';
@@ -12,6 +12,9 @@ import LumVita from '@/assets/luminosaVita.jpg';
 import metamorfica from '@/assets/metamorfica.jpg';
 import albero from '@/assets/albero.jpg';
 import RiflPlant from '@/assets/riflessologiaPlantareOrganica.jpg';
+import { useLanguage } from '@/translations/index';
+
+const { t } = useLanguage();
 
 interface Product {
     id: number;
@@ -27,48 +30,48 @@ interface ResponsiveOption {
     numScroll: number;
 }
 
-const products = ref<Product[]>([
+const products = computed (() => [
     {
         id: 1,
         name: "SOUL COACHING",
         tag: "Online",
         image: soul,
-        text: "Quando ti senti esausto, spesso è perché non stai vivendo in piena verità con te stesso. Solo entrando in contatto con la tua essenza può emergere la verità dell’anima. Questo percorso ti aiuta a guardarti con sincerità, affrontare le tue paure, riconoscere le ombre e liberarti dagli schemi familiari che non ti appartengono più.",
+        text: t('sections.servicesSection.service1.text'),
     },
     {
         id: 2,
-        name: "LUMINOSA ESSENZA",
+        name: t('sections.servicesSection.service2.name'),
         tag: "Online",
         image: LumEss,
-        text: "Ti senti sopraffatto dalle emozioni o desideri approfondire la tua consapevolezza interiore? Un percorso creato per chi vuole esplorare e trasformare le proprie emozioni attraverso un approccio sinergico che unisce l'Aromaterapia del Terreno® e il Soul Coaching.",
+        text: t('sections.servicesSection.service2.text'),
     },
     {
         id: 3,
-        name: "LUMINOSA VITA",
+        name: t('sections.servicesSection.service3.name'),
         tag: "Online",
         image: LumVita,
-        text: "Nata per aiutare le famiglie a superare difficoltà legate alla comunicazione, gestione delle emozioni e ai conflitti.  L'obiettivo è creare relazioni più consapevoli e armoniose, dando a ciascuno le chiavi per affrontare le sfide quotidiane.",
+        text: t('sections.servicesSection.service3.text'),
     },
     {
         id: 4,
-        name: "TECNICA METAMORFICA",
+        name: t('sections.servicesSection.service4.name'),
         tag: "In sede",
         image: metamorfica,
-        text: "Il massaggio metamorfico è pensato per tutte quelle persone che sentono dentro sè dei blocchi inconsci, che non riescono a comprendere e che desiderano risolvere. La Tecnica Metamorfica si puo’ considerare il tocco delicato della potente forza trasformativa. Non basandosi sulla cura di specifici sintomi, è un eccezionale mezzo di trasformazione personale ed è adatta a tutti.",
+        text: t('sections.servicesSection.service4.text'),
     },
     {
         id: 5,
-        name: "EPIGENETICA DELL'ALBERO GENEALOGICO",
+        name: t('sections.servicesSection.service5.name'),
         tag: "Online",
         image: albero,
-        text: "Fare uno studio dell’albero genealogico equivale ad accedere all’inconscio e sciogliere programmi, patti, credenze e nodi ancestrali che nemmeno immaginiamo di avere, per poi riprogrammare il nostro 'dna emozionale'. Senti di ripetere la storia vissuta dal tuo antenato? Ti chiami con il nome di un tuo antenato e senti di portarne il peso? Vuoi saperne di più sul tuo albero genealogico?",
+        text: t('sections.servicesSection.service5.text'),
     },
     {
         id: 6,
-        name: "RIFLESSOLOGIA PLANTARE",
+        name: t('sections.servicesSection.service6.name'),
         tag: "In sede",
         image: RiflPlant,
-        text: "Il piede è la base del nostro incedere nel mondo e riassume in sé tutto l’organismo umano. La riflessologia plantare è una tecnica che che sfrutta la sollecitazione di aree specifiche del piede per ristabilire l’equilibrio del corpo. ",
+        text: t('sections.servicesSection.service6.text'),
     },
 ]);
 
@@ -101,9 +104,9 @@ const getSeverity = (status: Product['tag']): 'info' | 'warn' | 'null' => {
 </script>
 
 <template>
-    <div class="section">
+    <div class="section" id="services">
         <div class="title">
-            <h1>SERVIZI</h1>
+            <h1>{{  t('sections.servicesSection.title') }}</h1>
             <Divider></Divider>
         </div>
         <Carousel :value="products" :numVisible="3" :numScroll="1" :responsiveOptions="responsiveOptions">
@@ -115,7 +118,7 @@ const getSeverity = (status: Product['tag']): 'info' | 'warn' | 'null' => {
                         <Button icon="pi pi-arrow-right" size="large" rounded class="button"></Button>
                     </div>
                     
-                    <Tag :value="slotProps.data.tag" :severity="getSeverity(slotProps.data.tag)" class="tag"/>
+                    <Tag :value="slotProps.data.tag" :severity="getSeverity(slotProps.data.tag)" class="tag"  icon="pi pi-map-marker"/>
                     <p>{{ slotProps.data.text }}</p>
                 </div>
             </template>
@@ -129,7 +132,7 @@ const getSeverity = (status: Product['tag']): 'info' | 'warn' | 'null' => {
     display: flex;
     flex-direction: column;
     gap: 5rem;
-    padding: 8rem 4rem 5rem 4rem;
+    padding: 9rem 4rem 5rem 4rem;
     --p-carousel-indicator-active-background: var(--blue);
     --p-carousel-indicator-background: var(--light-blue);
 }
@@ -208,7 +211,7 @@ img{
 
 @media (max-width: 768px) {
     .section {
-        padding: 8rem 0 5rem 0;
+        padding: 7rem 0 5rem 0;
 
     }
 }

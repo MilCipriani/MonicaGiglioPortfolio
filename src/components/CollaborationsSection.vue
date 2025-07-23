@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { ref } from "vue";
+import { ref, computed } from "vue";
 
 import Carousel from 'primevue/carousel';
 import Button from 'primevue/button';
@@ -11,6 +11,9 @@ import Damaschi from '@/assets/Damaschi.jpg';
 import Casano from '@/assets/Casano.jpg';
 import Zocca from '@/assets/Zocca.jpg';
 import Bianchini from '@/assets/Bianchini.jpeg';
+import { useLanguage } from '@/translations/index';
+
+const { t } = useLanguage();
 
 interface Product {
     name: string;
@@ -25,36 +28,36 @@ interface ResponsiveOption {
     numScroll: number;
 }
 
-const products = ref<Product[]>([
+const products = computed( () =>[
     {
-        name: "Dott.ssa Monica Greco",
+        name: t('sections.collabSection.collab1.name'),
         image: Greco,
-        text: "Medico Chirurgo, Fisiatra, Ricercatrice, Medico di Segnale e Docente specializzata in Geriatria e Medicina Fisica e della riabilitazione"
+        text: t('sections.collabSection.collab1.text')
     },
     {
-        name: "Dott.ssa Gabriella Lucci",
+        name: t('sections.collabSection.collab2.name'),
         image: Lucci,
-        text: "Psicologa Clinica, della Salute e Neurofisiologica INPP Italia e 'Provider Level Stimolazione uditiva Individualizzata Johansen (JISA)'. Esperta in disturbi dell’età evolutiva, anomalie dello sviluppo neuromotorio, disturbi dell’apprendimento."
+        text: t('sections.collabSection.collab2.text')
     },
     {
         name: "Gloria Damaschi",
         image: Damaschi,
-        text: "Aromaterapeuta e ideatrice dell'Aromaterapeuta del Terreno®, Docente e Vicepresidente per l'Italia della Asociación Profesional Española de Naturopatía y Bioterapia (APENB)."
+        text: t('sections.collabSection.collab3.text')
     },
     {
         name: "Ilenia Casano",
         image: Casano,
-        text: "Dottoressa in SC. Della Formazione, Peer alto contatto e Docente. Peer Supporter Alto Contatto e Baywearing, Holistic Babywearing (stretching dei meridiani), esperta in allattamento e pratiche preconcezionali, operatrice tecnica metamorfica. Aromaterapeuta e Coach alimentare A.M.A."
+        text: t('sections.collabSection.collab4.text')
     },
     {
         name: "Prisca Zocca",
         image: Zocca,
-        text: "Family Coach, Counselor e facilitatore di Costellazioni Familiari, nonché professionista certificata in Kinesiologia e Tecnica Metamorfica."
+        text: t('sections.collabSection.collab5.text')
     },
     {
         name: "Daniele Bianchini",
         image: Bianchini,
-        text: "Preparatore Fisico e dottore in scienze motorie e sportive. Preparatore Fisico Nazionale presso la FIP, dal 2017 si occupa del Wellness per finalità non agonistiche, con sedute e percorsi One to One."
+        text: t('sections.collabSection.collab6.text')
     },
 ]);
 
@@ -74,15 +77,15 @@ const responsiveOptions = ref<ResponsiveOption[]>([
 </script>
 
 <template>
-    <div class="section">
+    <div class="section" id="collab">
         
         <div class="title">
-            <h1>COLLABORATORI</h1>
+            <h1>{{  t('sections.collabSection.title') }}</h1>
             <Divider></Divider>
         </div>
         <div class="text">
-            <h2>Credo nella forza della sinergia</h2>
-            <h3>Per questo collaboro con altri professionisti della salute, offrendo un approccio integrato e personalizzato al benessere.</h3>            
+            <h2>{{  t('sections.collabSection.h2') }}</h2>
+            <h3>{{  t('sections.collabSection.h3') }}</h3>            
         </div>
         <Carousel :value="products" :numVisible="3" :numScroll="1" :responsiveOptions="responsiveOptions">
             <template #item="slotProps">
@@ -103,12 +106,13 @@ const responsiveOptions = ref<ResponsiveOption[]>([
 <style scoped>
 
 .section{
-    height: 100vh;
+    min-height: 100vh;
+    height: auto;
 
     display: flex;
     flex-direction: column;
     gap: 3rem;
-    padding: 5rem 4rem 5rem 4rem;
+    padding: 9rem 4rem 5rem 4rem;
     --p-carousel-indicator-active-background: var(--blue);
     --p-carousel-indicator-background: var(--light-blue);
 
@@ -200,18 +204,21 @@ img{
     .card p {
         width: 20rem;
     }
+    .card{
+        width: 75vw;
+    }
 }
 
 @media (max-width: 768px) {
     .section {
-        padding: 3rem 0 5rem 0;
+        padding: 7rem 0 2rem 0;
         margin-bottom: 0;
 
     }
 }
 
 /*rotated phones*/
-@media screen and (orientation: landscape) and (max-height: 500px) {
+@media screen and (orientation: landscape) and (max-height: 1050px) {
     .section {
         height: auto;
     }
