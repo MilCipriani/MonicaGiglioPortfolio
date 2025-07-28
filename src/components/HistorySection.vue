@@ -1,6 +1,5 @@
 <script setup lang="ts">
 import { computed } from "vue";
-import Divider from 'primevue/divider';
 import img1 from '@/assets/RadiciVocazione.jpg';
 import img2 from '@/assets/Ayurveda.jpg';
 import img3 from '@/assets/logoInLumine.svg';
@@ -18,6 +17,7 @@ interface TimelineItem {
   h1: string;
   p: string;
   img: string;
+  alt: string;
   class: Alignment;
   geometry?: number;
   isLogo?: boolean;
@@ -26,34 +26,40 @@ interface TimelineItem {
 const items = computed(() =>[
     { h1: t('sections.historySection.milestone1.h1'),
         p: t('sections.historySection.milestone1.p'),
+        alt: t('sections.historySection.milestone1.alt'),
         img: img1,
         class: "right",
         geometry: 1
     },
     { h1: t('sections.historySection.milestone2.h1'),
         p: t('sections.historySection.milestone2.p'),
+        alt: t('sections.historySection.milestone2.alt'),
         img: img2,
         class: 'left'
     },
     { h1: t('sections.historySection.milestone3.h1'),
         p: t('sections.historySection.milestone3.p'),
+        alt: t('sections.historySection.milestone3.alt'),
         img: img3,
         class: "right",
         isLogo: true
     },
     { h1: t('sections.historySection.milestone4.h1'),
         p: t('sections.historySection.milestone4.p'),
+        alt: t('sections.historySection.milestone4.alt'),
         img: img4,
         class: "left",
         geometry: 4
     },
     { h1: t('sections.historySection.milestone5.h1'),
         p: t('sections.historySection.milestone5.p'),
+        alt: t('sections.historySection.milestone5.alt'),
         img: img5,
         class: "right"
     },
     { h1: t('sections.historySection.milestone6.h1'),
         p: t('sections.historySection.milestone6.p'),
+        alt: t('sections.historySection.milestone6.alt'),
         img: img6,
         class: "left"
     }
@@ -74,7 +80,7 @@ const items = computed(() =>[
                 <div v-if="item.class == 'right' && !item.isLogo" class="milestone right">
 
                     <div class="image-container" style="grid-column: 2;">
-                        <img :src="item.img" class="images">
+                        <img :src="item.img" class="images" :alt="item.alt">
                         <img v-if="item.geometry == 1" :src="geometry" class="geometry1" alt="">
                     </div>
 
@@ -87,7 +93,7 @@ const items = computed(() =>[
                 <!--Layout to the right with logo handling-->
                 <div v-if="item.class == 'right' && item.isLogo" class="milestone right">
                     <div class="logo-container" style="grid-column: 2;">
-                        <img :src="item.img" class="logo" >
+                        <img :src="item.img" class="logo" :alt="item.alt">
                     </div>
                     
                     <div class="text"  style="grid-column: 3;">
@@ -104,17 +110,17 @@ const items = computed(() =>[
                         <p>{{ item.p }}</p>
                     </div>
                     <div class="image-container" style="grid-column: 2;">
-                        <img :src="item.img" class="images">
+                        <img :src="item.img" class="images" :alt="item.alt">
                         <img v-if="item.geometry == 4" :src="geometry" class="geometry4" alt="">
                     </div>
                 </div>
             </div>
 
             <!--Background geometry images-->
-            <img :src="geometry" class="geometry2">
-            <img :src="geometry" class="geometry3">
-            <img :src="geometry" class="geometry5">
-            <img :src="geometry" class="geometry6">
+            <img :src="geometry" class="geometry2" alt="">
+            <img :src="geometry" class="geometry3" alt="">
+            <img :src="geometry" class="geometry5" alt="">
+            <img :src="geometry" class="geometry6" alt="">
         </div>
     </div>
 </template>

@@ -15,6 +15,8 @@ export interface TranslationStructure {
       title: string;
       h2: string;
       p: string;
+      p2: string;
+      alt: string;
       button: string;
     };
     historySection: {
@@ -22,26 +24,32 @@ export interface TranslationStructure {
       milestone1: {
         h1: string;
         p: string;
+        alt: string;
       };
       milestone2: {
         h1: string;
         p: string;
+        alt: string;
       };
       milestone3: {
         h1: string;
         p: string;
+        alt: string;
       };
       milestone4: {
         h1: string;
         p: string;
+        alt: string;
       };
       milestone5: {
         h1: string;
         p: string;
+        alt: string;
       };
       milestone6: {
         h1: string;
         p: string;
+        alt: string;
       };
     };
     bannerSection: {
@@ -54,31 +62,37 @@ export interface TranslationStructure {
       service1: {
         name: string;
         tag: string;
+        alt: string;
         text: string;
       };
       service2: {
         name: string;
         tag: string;
+        alt: string;
         text: string;
       };
       service3: {
         name: string;
         tag: string;
+        alt: string;
         text: string;
       };
       service4: {
         name: string;
         tag: string;
+        alt: string;
         text: string;
       };
       service5: {
         name: string;
         tag: string;
+        alt: string;
         text: string;
       };
       service6: {
         name: string;
         tag: string;
+        alt: string;
         text: string;
       };
     };
@@ -89,26 +103,32 @@ export interface TranslationStructure {
       collab1: {
         name: string;
         text: string;
+        alt: string;
       };
       collab2: {
         name: string;
         text: string;
+        alt: string;
       };
       collab3: {
         name: string;
         text: string;
+        alt: string;
       };
       collab4: {
         name: string;
         text: string;
+        alt: string;
       };
       collab5: {
         name: string;
         text: string;
+        alt: string;
       };
       collab6: {
         name: string;
         text: string;
+        alt: string;
       };
     };
     coursesSection: {
@@ -163,57 +183,77 @@ export type TranslationKey =
   | 'sections.aboutSection.title'
   | 'sections.aboutSection.h2'
   | 'sections.aboutSection.p'
+  | 'sections.aboutSection.p2'
+  | 'sections.aboutSection.alt'
   | 'sections.aboutSection.button'
   | 'sections.historySection.title'
   | 'sections.historySection.milestone1.h1'
   | 'sections.historySection.milestone1.p'
+  | 'sections.historySection.milestone1.alt'
   | 'sections.historySection.milestone2.h1'
   | 'sections.historySection.milestone2.p'
+  | 'sections.historySection.milestone2.alt'
   | 'sections.historySection.milestone3.h1'
   | 'sections.historySection.milestone3.p'
+  | 'sections.historySection.milestone3.alt'
   | 'sections.historySection.milestone4.h1'
   | 'sections.historySection.milestone4.p'
+  | 'sections.historySection.milestone4.alt'
   | 'sections.historySection.milestone5.h1'
   | 'sections.historySection.milestone5.p'
+  | 'sections.historySection.milestone5.alt'
   | 'sections.historySection.milestone6.h1'
   | 'sections.historySection.milestone6.p'
+  | 'sections.historySection.milestone6.alt'
   | 'sections.bannerSection.h1'
   | 'sections.bannerSection.em'
   | 'sections.bannerSection.button'
   | 'sections.servicesSection.title'
   | 'sections.servicesSection.service1.name'
   | 'sections.servicesSection.service1.tag'
+  | 'sections.servicesSection.service1.alt'
   | 'sections.servicesSection.service1.text'
   | 'sections.servicesSection.service2.name'
   | 'sections.servicesSection.service2.tag'
+  | 'sections.servicesSection.service2.alt'
   | 'sections.servicesSection.service2.text'
   | 'sections.servicesSection.service3.name'
   | 'sections.servicesSection.service3.tag'
+  | 'sections.servicesSection.service3.alt'
   | 'sections.servicesSection.service3.text'
   | 'sections.servicesSection.service4.name'
   | 'sections.servicesSection.service4.tag'
+  | 'sections.servicesSection.service4.alt'
   | 'sections.servicesSection.service4.text'
   | 'sections.servicesSection.service5.name'
   | 'sections.servicesSection.service5.tag'
+  | 'sections.servicesSection.service5.alt'
   | 'sections.servicesSection.service5.text'
   | 'sections.servicesSection.service6.name'
   | 'sections.servicesSection.service6.tag'
+  | 'sections.servicesSection.service6.alt'
   | 'sections.servicesSection.service6.text'
   | 'sections.collabSection.title'
   | 'sections.collabSection.h2'
   | 'sections.collabSection.h3'
   | 'sections.collabSection.collab1.name'
   | 'sections.collabSection.collab1.text'
+  | 'sections.collabSection.collab1.alt'
   | 'sections.collabSection.collab2.name'
   | 'sections.collabSection.collab2.text'
+  | 'sections.collabSection.collab2.alt'
   | 'sections.collabSection.collab3.name'
   | 'sections.collabSection.collab3.text'
+  | 'sections.collabSection.collab3.alt'
   | 'sections.collabSection.collab4.name'
   | 'sections.collabSection.collab4.text'
+  | 'sections.collabSection.collab4.alt'
   | 'sections.collabSection.collab5.name'
   | 'sections.collabSection.collab5.text'
+  | 'sections.collabSection.collab5.alt'
   | 'sections.collabSection.collab6.name'
   | 'sections.collabSection.collab6.text'
+  | 'sections.collabSection.collab6.alt'
   | 'sections.coursesSection.title'
   | 'sections.coursesSection.flyerLabel'
   | 'sections.coursesSection.course1.date'

@@ -1,11 +1,6 @@
 <script setup lang="ts">
 import { ref, computed } from "vue";
 
-import Carousel from 'primevue/carousel';
-import Button from 'primevue/button';
-import Tag from 'primevue/tag';
-import Divider from 'primevue/divider';
-
 import soul from '@/assets/soulCoach.jpg';
 import LumEss from '@/assets/luminosaEssenza.jpg';
 import LumVita from '@/assets/luminosaVita.jpg';
@@ -21,6 +16,7 @@ interface Product {
     name: string;
     tag: 'Online' | 'In sede' | string;
     image: string;
+    alt: string;
     text: string;
 }
 
@@ -36,6 +32,7 @@ const products = computed (() => [
         name: "SOUL COACHING",
         tag: "Online",
         image: soul,
+        alt: t('sections.servicesSection.service1.alt'),
         text: t('sections.servicesSection.service1.text'),
     },
     {
@@ -43,6 +40,7 @@ const products = computed (() => [
         name: t('sections.servicesSection.service2.name'),
         tag: "Online",
         image: LumEss,
+        alt: t('sections.servicesSection.service2.alt'),
         text: t('sections.servicesSection.service2.text'),
     },
     {
@@ -50,6 +48,7 @@ const products = computed (() => [
         name: t('sections.servicesSection.service3.name'),
         tag: "Online",
         image: LumVita,
+        alt: t('sections.servicesSection.service3.alt'),
         text: t('sections.servicesSection.service3.text'),
     },
     {
@@ -57,6 +56,7 @@ const products = computed (() => [
         name: t('sections.servicesSection.service4.name'),
         tag: "In sede",
         image: metamorfica,
+        alt: t('sections.servicesSection.service4.alt'),
         text: t('sections.servicesSection.service4.text'),
     },
     {
@@ -64,6 +64,7 @@ const products = computed (() => [
         name: t('sections.servicesSection.service5.name'),
         tag: "Online",
         image: albero,
+        alt: t('sections.servicesSection.service5.alt'),
         text: t('sections.servicesSection.service5.text'),
     },
     {
@@ -71,6 +72,7 @@ const products = computed (() => [
         name: t('sections.servicesSection.service6.name'),
         tag: "In sede",
         image: RiflPlant,
+        alt: t('sections.servicesSection.service6.alt'),
         text: t('sections.servicesSection.service6.text'),
     },
 ]);
@@ -114,7 +116,7 @@ const getSeverity = (status: Product['tag']): 'info' | 'warn' | 'null' => {
                 <div class="card">
                     <h2>{{ slotProps.data.name }}</h2>
                     <div class="image-container">
-                        <img :src="slotProps.data.image" :alt="slotProps.data.name"/>
+                        <img :src="slotProps.data.image" :alt="slotProps.data.alt"/>
                         <Button icon="pi pi-arrow-right" size="large" rounded class="button"></Button>
                     </div>
                     

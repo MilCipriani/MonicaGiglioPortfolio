@@ -1,10 +1,5 @@
 <script setup lang="ts">
 import { ref, computed } from "vue";
-
-import Carousel from 'primevue/carousel';
-import Button from 'primevue/button';
-import Divider from 'primevue/divider';
-import Tag from 'primevue/tag';
 import { useLanguage } from '@/translations/index';
 
 const { t } = useLanguage();
@@ -111,7 +106,8 @@ const getSeverity = (status: Product['location']): 'info' | 'warn' => {
 .section{
     display: flex;
     flex-direction: column;
-    height: 100vh;
+    min-height: 100vh;
+    height: auto;
     gap: 5rem;
     padding: 9rem 4rem 5rem 4rem;
     --p-carousel-indicator-active-background: var(--blue);

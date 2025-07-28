@@ -1,8 +1,5 @@
 <script setup lang="ts">
-import Divider from 'primevue/divider';
-import Button from 'primevue/button';
 import { useLanguage } from '@/translations/index';
-
 const { t } = useLanguage();
 </script>
 
@@ -41,8 +38,12 @@ const { t } = useLanguage();
         <div class="socials">
             <h2>{{  t('sections.contactsSection.follow') }} :</h2>
             <div class="social-icons">
-                <Button icon="pi pi-instagram" severity="secondary" rounded size="large"></Button>
-                <Button icon="pi pi-facebook" severity="secondary" rounded size="large"></Button>
+                <a href="https://instagram.com/naturopata.monica.giglio" target="_blank" rel="noopener noreferrer">
+                    <Button icon="pi pi-instagram" severity="secondary" rounded size="large"></Button>
+                </a>
+                <a href="https://facebook.com/monica.giglio.7" target="_blank" rel="noopener noreferrer">
+                    <Button icon="pi pi-facebook" severity="secondary" rounded size="large"></Button>
+                </a>
             </div>
         </div>
     </div>
