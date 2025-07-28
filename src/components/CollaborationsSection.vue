@@ -1,10 +1,6 @@
 <script setup lang="ts">
 import { ref, computed } from "vue";
 
-import Carousel from 'primevue/carousel';
-import Button from 'primevue/button';
-import Divider from 'primevue/divider';
-
 import Greco from '@/assets/Greco.jpg';
 import Lucci from '@/assets/Lucci.jpg';
 import Damaschi from '@/assets/Damaschi.jpg';
@@ -18,6 +14,7 @@ const { t } = useLanguage();
 interface Product {
     name: string;
     image: string;
+    alt: string;
     text: string;
 
 }
@@ -32,31 +29,37 @@ const products = computed( () =>[
     {
         name: t('sections.collabSection.collab1.name'),
         image: Greco,
+        alt: t('sections.collabSection.collab1.alt'),
         text: t('sections.collabSection.collab1.text')
     },
     {
         name: t('sections.collabSection.collab2.name'),
         image: Lucci,
+        alt: t('sections.collabSection.collab2.alt'),
         text: t('sections.collabSection.collab2.text')
     },
     {
         name: "Gloria Damaschi",
         image: Damaschi,
+        alt: t('sections.collabSection.collab3.alt'),
         text: t('sections.collabSection.collab3.text')
     },
     {
         name: "Ilenia Casano",
         image: Casano,
+        alt: t('sections.collabSection.collab4.alt'),
         text: t('sections.collabSection.collab4.text')
     },
     {
         name: "Prisca Zocca",
         image: Zocca,
+        alt: t('sections.collabSection.collab5.alt'),
         text: t('sections.collabSection.collab5.text')
     },
     {
         name: "Daniele Bianchini",
         image: Bianchini,
+        alt: t('sections.collabSection.collab6.alt'),
         text: t('sections.collabSection.collab6.text')
     },
 ]);
@@ -92,7 +95,7 @@ const responsiveOptions = ref<ResponsiveOption[]>([
                 <div class="card">
                     <h3 style="text-transform: uppercase;">{{ slotProps.data.name }}</h3>
                     <div class="image-container">
-                        <img :src="slotProps.data.image" :alt="slotProps.data.name"/>
+                        <img :src="slotProps.data.image" :alt="slotProps.data.alt"/>
                         <Button icon="pi pi-arrow-right" size="large" rounded class="button"></Button>
                     </div>
                     

@@ -1,5 +1,4 @@
 <script setup lang="ts">
-import Button from 'primevue/button';
 import { useLanguage } from '@/translations/index';
 
 const { t } = useLanguage();
@@ -11,7 +10,10 @@ const { t } = useLanguage();
             <h2>{{ t('sections.bannerSection.h1') }}</h2>
             <h2><em>{{  t('sections.bannerSection.em') }}</em></h2>
         </div>
-        <Button rounded :label="t('sections.bannerSection.button')" class="button"></Button>
+        <a href="#contacts">
+            <Button rounded :label="t('sections.bannerSection.button')" class="button"></Button>
+        </a>
+        
     </div>
 </template>
 

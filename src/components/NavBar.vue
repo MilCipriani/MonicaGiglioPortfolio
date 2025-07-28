@@ -1,6 +1,5 @@
 <script setup lang="ts">
 import { computed } from "vue";
-import Menubar from 'primevue/menubar';
 import itIcon from '@/assets/ITicon.svg';
 import esIcon from '@/assets/ESicon.svg';
 import logo from '@/assets/logo.svg';
@@ -50,7 +49,7 @@ const items = computed(() =>[
             </template>
             <template #item="{ item }">
                 <a :href="item.href">
-                    <img v-if="item.icon" :src="item.icon" alt="Italian icon" class="lang" @click="toggleLanguage">
+                    <img v-if="item.icon" :src="item.icon" alt="Language icon" class="lang" @click="toggleLanguage">
                     <span v-if="item.label">{{ item.label }}</span>
                 </a>
             </template>

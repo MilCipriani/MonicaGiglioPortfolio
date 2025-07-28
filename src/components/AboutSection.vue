@@ -1,9 +1,15 @@
 <script setup lang="ts">
-import Button from 'primevue/button';
-import Divider from 'primevue/divider';
 import { useLanguage } from '@/translations/index';
-
 const { t } = useLanguage();
+
+const downloadFile = (): void => {
+  const link = document.createElement('a');
+  link.href = 'MonicaGiglioCurriculum.pdf';
+  link.download = 'MonicaGiglioCurriculum.pdf'; //filename
+  document.body.appendChild(link);
+  link.click();
+  document.body.removeChild(link);
+}
 </script>
 
 <template>
@@ -13,11 +19,14 @@ const { t } = useLanguage();
             <Divider></Divider>
         </div>
         <div class="content">
-            <img src="@/assets/profilePicSquared.jpg" alt="Portrait">
+            <img src="@/assets/profilePicSquared.jpg" :alt="t('sections.aboutSection.alt')">
             <div class="text">
                 <h2>{{ t('sections.aboutSection.h2') }}</h2>
-                <p>{{ t('sections.aboutSection.p') }}</p>
-                <Button :label="t('sections.aboutSection.button')" rounded icon="pi pi-download"></Button>
+                <div class="paragraphs">
+                    <p>{{ t('sections.aboutSection.p') }}</p>
+                    <p>{{ t('sections.aboutSection.p2') }}</p>
+                </div>
+                <Button :label="t('sections.aboutSection.button')" rounded icon="pi pi-download" @click="downloadFile"></Button>
             </div>
         </div>
     </div>
@@ -62,6 +71,12 @@ const { t } = useLanguage();
     gap: 4.5rem;
     text-align: center;
 
+}
+
+.paragraphs {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
 }
 
 img{
