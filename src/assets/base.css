@@ -5,32 +5,21 @@
   --blue: #145189;
   --gold: #E1BA54;
   --white: #f3f3f3;
+
+  --turqouise-hover: #17f0ff;
+  --blue-hover: #20a6c7;
 }
 
 /* semantic color variables */
 :root {
   --color-background: var(--white);
-
   --color-border: var(--light-blue);
-
   --color-text: var(--blue)
 }
 
-/* dark theme
-@media (prefers-color-scheme: dark) {
-  :root {
-    --color-background: var(--vt-c-black);
-    --color-background-soft: var(--vt-c-black-soft);
-    --color-background-mute: var(--vt-c-black-mute);
-
-    --color-border: var(--vt-c-divider-dark-2);
-    --color-border-hover: var(--vt-c-divider-dark-1);
-
-    --color-heading: var(--vt-c-text-dark-1);
-    --color-text: var(--vt-c-text-dark-2);
-  }
+::-webkit-scrollbar {
+    display: none;
 }
-*/
 
 *,
 *::before,
@@ -38,6 +27,26 @@
   box-sizing: border-box;
   margin: 0;
   font-weight: normal;
+}
+
+html {
+  scrollbar-width: none;
+  scroll-behavior: smooth;
+}
+
+@media (max-width: 768px) {
+  html {
+    font-size: 14px
+  }
+  h1 {
+    font-size: 1.5rem;
+  }
+  h2 {
+    font-size: 1.3rem;
+  }
+  h3 {
+    font-size: 1.1rem;
+  }
 }
 
 body {
@@ -49,20 +58,32 @@ body {
     background-color 0.5s;
   line-height: 1.5;
   font-family:
-    Inter,
-    -apple-system,
-    BlinkMacSystemFont,
-    'Segoe UI',
-    Roboto,
-    Oxygen,
-    Ubuntu,
-    Cantarell,
-    'Fira Sans',
-    'Droid Sans',
-    'Helvetica Neue',
-    sans-serif;
-  font-size: 16px;
+    'Crimson Pro',
+    'Times New Roman',
+    Times,
+    'Georgia',
+    'Garamond',
+    serif;
+  font-size: 1rem;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  overflow-x: hidden;
+
+}
+
+h1, h2, h3, h4, h5, h6, a, .Mont {
+  font-family: 
+    'Montserrat',
+    -apple-system,
+    BlinkMacSystemFont,
+    'Segoe UI',
+    'Helvetica Neue',
+    Arial,
+    sans-serif;
+}
+
+a, a:hover, a:active {
+  text-decoration: none;
+  color: var(--blue);
 }

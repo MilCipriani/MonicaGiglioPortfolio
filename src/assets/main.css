@@ -1,44 +1,45 @@
 @import './base.css';
+@import 'primeicons/primeicons.css';
+
 
 #app {
   margin: 0;
   font-weight: normal;
+  overflow-x: hidden;
 }
 
-/*
-#app {
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 2rem;
+.p-button{
+  --p-button-padding-x: 2rem;
+  --p-button-padding-y: 1.5rem;
+  --p-button-rounded-border-radius: 10rem;
+  --p-button-lg-font-size: 2rem;
+
+  --p-button-primary-background: var(--turquoise);
+  --p-button-primary-border-color: var(--turquoise);
+  --p-button-primary-hover-background: var(--turqouise-hover);
+  --p-button-primary-hover-border-color: var(--turqouise-hover);
+
+  --p-button-secondary-background: var(--blue);
+  --p-button-secondary-border-color: var(--blue);
+  --p-button-secondary-hover-background: var(--blue-hover);
+  --p-button-secondary-hover-border-color: var(--blue-hover);
+  --p-button-secondary-color: var(--white);
+  --p-button-secondary-hover-color: var(--white);
+}
+
+.p-button-label {
+  font-family: 'Montserrat';
+
+}
+
+.p-divider {
+  --p-divider-border-color: var(--light-blue);
+}
+
+h2{
   font-weight: normal;
 }
 
-a,
-.green {
-  text-decoration: none;
-  color: hsla(160, 100%, 37%, 1);
-  transition: 0.4s;
-  padding: 3px;
+.p-icon {
+  color: var(--blue);
 }
-
- Target only devices where hovering is supported:
-@media (hover: hover) {
-  a:hover {
-    background-color: hsla(24, 91%, 58%, 0.2);
-  }
-}
-
-Tablet and up. 64em for desktops
-@media (min-width: 64em) {
-  body {
-    display: flex;
-    place-items: center;
-  }
-
-  #app {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    padding: 0 2rem;
-  }
-}
-*/
