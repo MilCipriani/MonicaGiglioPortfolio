@@ -7,6 +7,7 @@ import BannerSection from './components/BannerSection.vue';
 import ServicesSection from './components/ServicesSection.vue';
 import CollaborationsSection from './components/CollaborationsSection.vue';
 import CoursesSection from './components/CoursesSection.vue';
+import DarkBannerSection from './components/DarkBannerSection.vue';
 import ContactsSection from './components/ContactsSection.vue';
 
 import type { SupportedLanguages } from '@/translations/translationTyping.ts';
@@ -33,6 +34,7 @@ setLanguage(validLanguage);
     <div class="courses-wrapper">
       <CoursesSection></CoursesSection>
     </div>
+    <DarkBannerSection></DarkBannerSection>
     <ContactsSection></ContactsSection>
   </main>
 </template>

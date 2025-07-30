@@ -18,6 +18,7 @@ export interface TranslationStructure {
       p2: string;
       alt: string;
       button: string;
+      resume: string;
     };
     historySection: {
       title: string;
@@ -159,6 +160,10 @@ export interface TranslationStructure {
         duration: string;
       };
     };
+    darkBannerSection: {
+      p: string;
+      p2: string;
+    };
     contactsSection: {
       title: string;
       h2: string;
@@ -186,6 +191,7 @@ export type TranslationKey =
   | 'sections.aboutSection.p2'
   | 'sections.aboutSection.alt'
   | 'sections.aboutSection.button'
+  | 'sections.aboutSection.resume'
   | 'sections.historySection.title'
   | 'sections.historySection.milestone1.h1'
   | 'sections.historySection.milestone1.p'
@@ -274,6 +280,8 @@ export type TranslationKey =
   | 'sections.coursesSection.course3.teachers'
   | 'sections.coursesSection.course3.text'
   | 'sections.coursesSection.course3.duration'
+  | 'sections.darkBannerSection.p'
+  | 'sections.darkBannerSection.p2'
   | 'sections.contactsSection.title'
   | 'sections.contactsSection.h2'
   | 'sections.contactsSection.p'

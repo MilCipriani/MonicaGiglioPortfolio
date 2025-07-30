@@ -17,7 +17,8 @@ export default {
       p: 'Mi objetivo es acompañar el proceso de transformación personal y evolución interior a través del bienestar holístico.',
       p2: 'Me guía una profunda pasión por el equilibrio y la conexión entre mente, cuerpo y espíritu.',
       alt: 'Retrato de Monica',
-      button: 'DESCARGA MI CV'
+      button: 'DESCARGA MI CV',
+      resume: 'MonicaGiglioCurriculumEs.pdf'
     },
     historySection: {
       title: 'MI HISTORIA',
@@ -66,13 +67,13 @@ export default {
         text: "Cuando te sientes agotado, muchas veces es porque no estás viviendo en plena verdad contigo mismo. Solo al conectar con tu esencia puede emerger la verdad del alma. Este camino te ayuda a mirarte con sinceridad, enfrentar tus miedos, reconocer tus sombras y liberarte de los patrones familiares que ya no te pertenecen.",
       },
       service2: {
-        name: "ESENCIA LUMINOSA",
+        name: "LUMINOSA ESENCIA",
         tag: "Online",
         alt: 'Imagen de un atardecer',
         text: "¿Te sientes abrumado por las emociones o deseas profundizar tu conciencia interior? Un recorrido creado para quienes desean explorar y transformar sus emociones mediante un enfoque sinérgico que une la Aromaterapia del Terreno® con el Soul Coaching.",
       },
       service3: {
-        name: "VIDA LUMINOSA",
+        name: "LUMINOSA VIDA",
         tag: "Online",
         alt: 'Un águila vuela sobre un bosque azul',
         text: "Nacido para ayudar a las familias a superar dificultades relacionadas con la comunicación, la gestión emocional y los conflictos. El objetivo es crear relaciones más conscientes y armoniosas, brindando a cada persona las herramientas para enfrentar los desafíos cotidianos.",
@@ -90,7 +91,7 @@ export default {
         text: "Estudiar el árbol genealógico equivale a acceder al inconsciente y disolver programas, pactos, creencias y nudos ancestrales que ni imaginamos tener, para luego reprogramar nuestro 'ADN emocional'. ¿Sientes que repites la historia de un antepasado? ¿Tienes su mismo nombre y sientes que cargas con su peso? ¿Quieres saber más sobre tu árbol genealógico?",
       },
       service6: {
-        name: "REFLEXOLOGÍA PODAL",
+        name: "REFLEXOLOGÍA PODAL ORGANICA",
         tag: "Presencial",
         alt: 'Foto de familia con caritas graciosas dibujadas en los pies',
         text: "El pie es la base de nuestro andar en el mundo y resume en sí todo el organismo humano. La reflexología podal es una técnica que estimula áreas específicas del pie para restablecer el equilibrio del cuerpo.",
@@ -136,7 +137,7 @@ export default {
       flyerLabel: 'CARTEL',
       course1: {
         date: '17-18 Oct 2025',
-        name: 'Curso de reflexología orgánica',
+        name: 'Curso de reflexología podal orgánica',
         location: 'Rivalta di Torino',
         teachers: 'Docente Monica Giglio',
         text: 'En este curso aprenderás a practicar reflexología podal orgánica de forma autónoma y eficaz. Este tipo de reflexología actúa directamente sobre los sistemas del cuerpo y no sobre los meridianos.',
@@ -158,6 +159,10 @@ export default {
         text: 'Dos días de seminario intensivo para profundizar en ti mismo, reconocerte y transformar tu experiencia en alas para volar más allá.',
         duration: '2 encuentros'
       }
+    },
+    darkBannerSection: {
+      p: 'Sumérgete en las profundidades de tu ser para descubrir la luz que ya habita en ti.',
+      p2: 'Cada sombra oculta un don, cada miedo una fuerza por despertar.'
     },
     contactsSection: {
       title: 'CONTACTO',

@@ -11,6 +11,7 @@ interface Product {
     location: string;
     teachers: string;
     text: string;
+    link?: string;
     flyer?: string;
     duration: string;
 }
@@ -29,8 +30,9 @@ const products = computed( () =>[
         location: t('sections.coursesSection.course1.location'),
         teachers: t('sections.coursesSection.course1.teachers'),
         text: t('sections.coursesSection.course1.text'),
+        link: 'https://inlumine.es/it/event/riflessologia-plantare/',
         duration: t('sections.coursesSection.course1.duration'),
-        flyer: t('sections.coursesSection.flyerLabel')
+        //flyer: t('sections.coursesSection.flyerLabel')
     },
     {
         date: t('sections.coursesSection.course2.date'),
@@ -38,6 +40,7 @@ const products = computed( () =>[
         location: t('sections.coursesSection.course2.location'),
         teachers: t('sections.coursesSection.course2.teachers'),
         text: t('sections.coursesSection.course2.text'),
+        link: 'https://inlumine.es/it/event/corso-tecnica-metamorfica/',
         duration: t('sections.coursesSection.course2.duration'),
     },
     {
@@ -46,6 +49,7 @@ const products = computed( () =>[
         location: t('sections.coursesSection.course3.location'),
         teachers: t('sections.coursesSection.course3.teachers'),
         text: t('sections.coursesSection.course2.text'),
+        link: 'https://inlumine.es/it/event/volare-oltre/',
         duration: t('sections.coursesSection.course3.duration'),
     },
 ]);
@@ -90,6 +94,7 @@ const getSeverity = (status: Product['location']): 'info' | 'warn' => {
                     <div class="text">
                         <p class="teachers">{{ slotProps.data.teachers }}</p>
                         <p class="description">{{ slotProps.data.text }}</p>
+                        <a v-if="slotProps.data.link" :href="slotProps.data.link" target="_blank" rel="noopener noreferrer">Maggiori informazioni</a>
                     </div>
                     <div class="card-footer">
                         <Button v-if="slotProps.data.flyer" icon="pi pi-download" class="flyer" :label="slotProps.data.flyer"></Button>
@@ -178,12 +183,20 @@ h2 {
     margin-bottom: auto;
 }
 
+.text a {
+    font-family: 'CrimsonPro';
+    color: var(--light-blue);
+}
 p {
     text-align: justify;
 }
 
 .teachers {
     margin-bottom: 1rem;
+}
+
+.description {
+    margin-bottom: 2rem;
 }
 
 .card-footer {

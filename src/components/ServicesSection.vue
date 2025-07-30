@@ -18,6 +18,7 @@ interface Product {
     image: string;
     alt: string;
     text: string;
+    link?: string;
 }
 
 interface ResponsiveOption {
@@ -34,6 +35,7 @@ const products = computed (() => [
         image: soul,
         alt: t('sections.servicesSection.service1.alt'),
         text: t('sections.servicesSection.service1.text'),
+        link: 'https://inlumine.es/it/services/coach-emozionale/'
     },
     {
         id: 2,
@@ -42,6 +44,7 @@ const products = computed (() => [
         image: LumEss,
         alt: t('sections.servicesSection.service2.alt'),
         text: t('sections.servicesSection.service2.text'),
+        link: 'https://inlumine.es/it/services/luminosa-essenza/'
     },
     {
         id: 3,
@@ -58,6 +61,7 @@ const products = computed (() => [
         image: metamorfica,
         alt: t('sections.servicesSection.service4.alt'),
         text: t('sections.servicesSection.service4.text'),
+        link: 'https://inlumine.es/it/event/corso-tecnica-metamorfica/'
     },
     {
         id: 5,
@@ -66,6 +70,7 @@ const products = computed (() => [
         image: albero,
         alt: t('sections.servicesSection.service5.alt'),
         text: t('sections.servicesSection.service5.text'),
+        link: 'https://inlumine.es/it/services/decodificazione-epigenetica-dell-albero-genealogico/'
     },
     {
         id: 6,
@@ -74,6 +79,7 @@ const products = computed (() => [
         image: RiflPlant,
         alt: t('sections.servicesSection.service6.alt'),
         text: t('sections.servicesSection.service6.text'),
+        link: 'https://inlumine.es/it/event/riflessologia-plantare/'
     },
 ]);
 
@@ -117,7 +123,10 @@ const getSeverity = (status: Product['tag']): 'info' | 'warn' | 'null' => {
                     <h2>{{ slotProps.data.name }}</h2>
                     <div class="image-container">
                         <img :src="slotProps.data.image" :alt="slotProps.data.alt"/>
-                        <Button icon="pi pi-arrow-right" size="large" rounded class="button"></Button>
+                        <a v-if="slotProps.data.link" :href="slotProps.data.link" target="_blank" rel="noopener noreferrer">
+                            <Button icon="pi pi-arrow-right" size="large" rounded class="button"></Button>
+                        </a>
+                        
                     </div>
                     
                     <Tag :value="slotProps.data.tag" :severity="getSeverity(slotProps.data.tag)" class="tag"  icon="pi pi-map-marker"/>

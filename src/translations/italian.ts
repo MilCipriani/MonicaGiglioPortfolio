@@ -17,7 +17,8 @@ export default {
         p: 'Il mio obbiettivo é quello di accompagnare attraverso il benessere olistico, la trasformazione personale e l’evoluzione interiore.',
         p2: 'Sono guidata da una profonda passione per l’equilibrio e la connessione tra mente, corpo e spirito.',
         alt: 'Ritratto di Monica',
-        button: 'SCARICA IL MIO CV'
+        button: 'SCARICA IL MIO CV',
+        resume: 'MonicaGiglioCurriculum.pdf'
     },
     historySection: {
       title: 'LA MIA STORIA',
@@ -90,7 +91,7 @@ export default {
         text: "Fare uno studio dell’albero genealogico equivale ad accedere all’inconscio e sciogliere programmi, patti, credenze e nodi ancestrali che nemmeno immaginiamo di avere, per poi riprogrammare il nostro 'dna emozionale'. Senti di ripetere la storia vissuta dal tuo antenato? Ti chiami con il nome di un tuo antenato e senti di portarne il peso? Vuoi saperne di più sul tuo albero genealogico?",
       },
       service6: {
-        name: "RIFLESSOLOGIA PLANTARE",
+        name: "RIFLESSOLOGIA PLANTARE ORGANICA",
         tag: "In sede",
         alt: 'Foto di famiglia con faccine buffe disegnate sui piedi',
         text: "Il piede è la base del nostro incedere nel mondo e riassume in sé tutto l’organismo umano. La riflessologia plantare è una tecnica che che sfrutta la sollecitazione di aree specifiche del piede per ristabilire l’equilibrio del corpo. ",
@@ -136,7 +137,7 @@ export default {
       flyerLabel: 'LOCANDINA',
       course1: {
         date: '17-18 Ott 2025',
-        name: 'Corso di riflessologia organica',
+        name: 'Corso di riflessologia plantare organica',
         location: 'Rivalta di Torino',
         teachers: 'Docente Monica Giglio',
         text: 'In questo corso imparerai come praticare la riflessologia plantare organica in piena autonomia con la massima efficacia. Questo tipo di riflessologia lavora direttamente sugli apparati e non sui meridiani.',
@@ -158,6 +159,10 @@ export default {
         text: 'Due giorni di seminario intensivo nella profondità di te stesso per ri-conoscerti e trasformare il tuo vissuto in ali per volare oltre.',
         duration: '2 incontri'
       }
+    },
+    darkBannerSection: {
+      p: 'Immergiti nelle profondità del tuo essere per scoprire la luce che già dimora in te.',
+      p2: 'Ogni ombra nasconde un dono, ogni paura una forza da risvegliare.'
     },
     contactsSection: {
       title: 'CONTATTI',

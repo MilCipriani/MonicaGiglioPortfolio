@@ -16,7 +16,7 @@ interface Product {
     image: string;
     alt: string;
     text: string;
-
+    link?: string;
 }
 
 interface ResponsiveOption {
@@ -30,7 +30,8 @@ const products = computed( () =>[
         name: t('sections.collabSection.collab1.name'),
         image: Greco,
         alt: t('sections.collabSection.collab1.alt'),
-        text: t('sections.collabSection.collab1.text')
+        text: t('sections.collabSection.collab1.text'),
+        link: 'https://metatraining.it/'
     },
     {
         name: t('sections.collabSection.collab2.name'),
@@ -42,7 +43,8 @@ const products = computed( () =>[
         name: "Gloria Damaschi",
         image: Damaschi,
         alt: t('sections.collabSection.collab3.alt'),
-        text: t('sections.collabSection.collab3.text')
+        text: t('sections.collabSection.collab3.text'),
+        link: 'https://www.gloriadamaschi.it/'
     },
     {
         name: "Ilenia Casano",
@@ -60,7 +62,8 @@ const products = computed( () =>[
         name: "Daniele Bianchini",
         image: Bianchini,
         alt: t('sections.collabSection.collab6.alt'),
-        text: t('sections.collabSection.collab6.text')
+        text: t('sections.collabSection.collab6.text'),
+        link: 'https://www.instagram.com/danielebianchini_atwellness/'
     },
 ]);
 
@@ -96,7 +99,9 @@ const responsiveOptions = ref<ResponsiveOption[]>([
                     <h3 style="text-transform: uppercase;">{{ slotProps.data.name }}</h3>
                     <div class="image-container">
                         <img :src="slotProps.data.image" :alt="slotProps.data.alt"/>
-                        <Button icon="pi pi-arrow-right" size="large" rounded class="button"></Button>
+                        <a v-if="slotProps.data.link" :href="slotProps.data.link" target="_blank" rel="noopener noreferrer">
+                            <Button icon="pi pi-arrow-right" size="large" rounded class="button"></Button>
+                        </a>
                     </div>
                     
                     <p>{{ slotProps.data.text }}</p>

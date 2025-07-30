@@ -4,7 +4,7 @@ const { t } = useLanguage();
 
 const downloadFile = (): void => {
   const link = document.createElement('a');
-  link.href = 'MonicaGiglioCurriculum.pdf';
+  link.href = t('sections.aboutSection.resume');
   link.download = 'MonicaGiglioCurriculum.pdf'; //filename
   document.body.appendChild(link);
   link.click();
