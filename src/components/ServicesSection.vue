@@ -14,7 +14,7 @@ const { t } = useLanguage();
 interface Product {
     id: number;
     name: string;
-    tag: 'Online' | 'In sede' | string;
+    tag: string;
     image: string;
     alt: string;
     text: string;
@@ -31,7 +31,7 @@ const products = computed (() => [
     {
         id: 1,
         name: "SOUL COACHING",
-        tag: "Online",
+        tag: t('sections.servicesSection.service1.tag'),
         image: soul,
         alt: t('sections.servicesSection.service1.alt'),
         text: t('sections.servicesSection.service1.text'),
@@ -40,7 +40,7 @@ const products = computed (() => [
     {
         id: 2,
         name: t('sections.servicesSection.service2.name'),
-        tag: "Online",
+        tag: t('sections.servicesSection.service2.tag'),
         image: LumEss,
         alt: t('sections.servicesSection.service2.alt'),
         text: t('sections.servicesSection.service2.text'),
@@ -49,7 +49,7 @@ const products = computed (() => [
     {
         id: 3,
         name: t('sections.servicesSection.service3.name'),
-        tag: "Online",
+        tag: t('sections.servicesSection.service3.tag'),
         image: LumVita,
         alt: t('sections.servicesSection.service3.alt'),
         text: t('sections.servicesSection.service3.text'),
@@ -57,7 +57,7 @@ const products = computed (() => [
     {
         id: 4,
         name: t('sections.servicesSection.service4.name'),
-        tag: "In sede",
+        tag: t('sections.servicesSection.service4.tag'),
         image: metamorfica,
         alt: t('sections.servicesSection.service4.alt'),
         text: t('sections.servicesSection.service4.text'),
@@ -66,7 +66,7 @@ const products = computed (() => [
     {
         id: 5,
         name: t('sections.servicesSection.service5.name'),
-        tag: "Online",
+        tag: t('sections.servicesSection.service5.tag'),
         image: albero,
         alt: t('sections.servicesSection.service5.alt'),
         text: t('sections.servicesSection.service5.text'),
@@ -75,7 +75,7 @@ const products = computed (() => [
     {
         id: 6,
         name: t('sections.servicesSection.service6.name'),
-        tag: "In sede",
+        tag: t('sections.servicesSection.service6.tag'),
         image: RiflPlant,
         alt: t('sections.servicesSection.service6.alt'),
         text: t('sections.servicesSection.service6.text'),
@@ -103,6 +103,9 @@ const getSeverity = (status: Product['tag']): 'info' | 'warn' | 'null' => {
             return 'info';
 
         case 'In sede':
+            return 'warn';
+
+        case 'Presencial':
             return 'warn';
 
         default:

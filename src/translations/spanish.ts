@@ -39,7 +39,7 @@ export default {
       },
       milestone4: {
         h1: 'El cambio: Mallorca y nuevas herramientas',
-        p: 'En 2011, una profunda crisis me impulsó a cambiarlo todo. Elegí mudarme a Mallorca, un lugar que siempre sentí como mi hogar. Aquí redescubrí la naturaleza, el tiempo y la espiritualidad. Continué formándome con nuevas herramientas como la Bioneuroemoción, la biodescodificación del árbol genealógico y la epigenética.',
+        p: 'En el 2011, una profunda crisis me impulsó a cambiarlo todo. Elegí mudarme a Mallorca, un lugar que siempre sentí como mi hogar. Aquí redescubrí la naturaleza, el tiempo y la espiritualidad. Continué formándome con nuevas herramientas como la Bioneuroemoción, la biodescodificación del árbol genealógico y la epigenética.',
         alt: 'El mar de Mallorca'
       },
       milestone5: {
@@ -123,7 +123,7 @@ export default {
       },
       collab5: {
         name: "Prisca Zocca",
-        text: "Family Coach, Counselor y facilitadora de Constelaciones Familiares, además de profesional certificada en Kinesiología y Técnica Metamórfica.",
+        text: "Family Coach, Counselor y facilitadora de Constelaciones Familiares, además de profesional certificada en Kinesiología y Técnica Metamórfica. Juntas llevamos adelante Luminosa Vita, un camino dirigido a las familias para mejorar la comunicación y el equilibrio emocional.",
         alt: 'Foto de Prisca Zocca'
       },
       collab6: {
@@ -135,6 +135,7 @@ export default {
     coursesSection: {
       title: 'CURSOS EN PROGRAMACIÓN',
       flyerLabel: 'CARTEL',
+      moreInfo: 'Más info',
       course1: {
         date: '17-18 Oct 2025',
         name: 'Curso de reflexología podal orgánica',
@@ -166,8 +167,7 @@ export default {
     },
     contactsSection: {
       title: 'CONTACTO',
-      h2: 'CONTÁCTAME',
-      p: 'Si estás aquí, tu viaje ya ha comenzado. Sea cual sea el motivo, estoy feliz de acompañarte en tu transformación.',
+      h3: 'Si estás aquí, tu viaje ya ha comenzado. Sea cual sea el motivo, estoy feliz de acompañarte en tu transformación.',
       follow: 'SÍGUEME',
       allRightsReserved: '© 2025 Monica Giglio. Todos los derechos reservados.'
     }

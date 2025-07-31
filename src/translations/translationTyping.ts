@@ -135,6 +135,7 @@ export interface TranslationStructure {
     coursesSection: {
       title: string;
       flyerLabel: string;
+      moreInfo: string;
       course1: {
         date: string;
         name: string;
@@ -166,8 +167,7 @@ export interface TranslationStructure {
     };
     contactsSection: {
       title: string;
-      h2: string;
-      p: string;
+      h3: string;
       follow: string;
       allRightsReserved: string;
     };
@@ -262,6 +262,7 @@ export type TranslationKey =
   | 'sections.collabSection.collab6.alt'
   | 'sections.coursesSection.title'
   | 'sections.coursesSection.flyerLabel'
+  | 'sections.coursesSection.moreInfo'
   | 'sections.coursesSection.course1.date'
   | 'sections.coursesSection.course1.name'
   | 'sections.coursesSection.course1.location'
@@ -283,7 +284,6 @@ export type TranslationKey =
   | 'sections.darkBannerSection.p'
   | 'sections.darkBannerSection.p2'
   | 'sections.contactsSection.title'
-  | 'sections.contactsSection.h2'
-  | 'sections.contactsSection.p'
+  | 'sections.contactsSection.h3'
   | 'sections.contactsSection.follow'
   | 'sections.contactsSection.allRightsReserved';

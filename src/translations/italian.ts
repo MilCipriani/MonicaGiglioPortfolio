@@ -123,7 +123,7 @@ export default {
       },
       collab5: {
         name: "Prisca Zocca",
-        text: "Family Coach, Counselor e facilitatore di Costellazioni Familiari, nonché professionista certificata in Kinesiologia e Tecnica Metamorfica.",
+        text: "Family Coach, Counselor e facilitatore di Costellazioni Familiari, nonché professionista certificata in Kinesiologia e Tecnica Metamorfica. Insieme portiamo avanti Luminosa Vita, un percorso rivolto alle famiglie per migliorare comunicazione ed equilibrio emotivo.",
         alt: 'Foto di Prisca Zocca'
       },
       collab6: {
@@ -135,6 +135,7 @@ export default {
     coursesSection: {
       title: 'CORSI IN PROGRAMMAZIONE',
       flyerLabel: 'LOCANDINA',
+      moreInfo: 'Maggiori info',
       course1: {
         date: '17-18 Ott 2025',
         name: 'Corso di riflessologia plantare organica',
@@ -166,8 +167,7 @@ export default {
     },
     contactsSection: {
       title: 'CONTATTI',
-      h2: 'CONTATTAMI',
-      p: 'Se ti trovi qui, il tuo viaggio è già iniziato. Qualunque sia il motivo, sono felice di accompagnarti nella tua trasformazione.',
+      h3: 'Se ti trovi qui, il tuo viaggio è già iniziato. Qualunque sia il motivo, sono felice di accompagnarti nella tua trasformazione.',
       follow: 'SEGUIMI',
       allRightsReserved: '© 2025 Monica Giglio. Tutti i diritti riservati.'
     }
