@@ -94,7 +94,7 @@ const getSeverity = (status: Product['location']): 'info' | 'warn' => {
                     <div class="text">
                         <p class="teachers">{{ slotProps.data.teachers }}</p>
                         <p class="description">{{ slotProps.data.text }}</p>
-                        <a v-if="slotProps.data.link" :href="slotProps.data.link" target="_blank" rel="noopener noreferrer">Maggiori informazioni</a>
+                        <a v-if="slotProps.data.link" :href="slotProps.data.link" target="_blank" rel="noopener noreferrer">{{ t('sections.coursesSection.moreInfo') }}</a>
                     </div>
                     <div class="card-footer">
                         <Button v-if="slotProps.data.flyer" icon="pi pi-download" class="flyer" :label="slotProps.data.flyer"></Button>

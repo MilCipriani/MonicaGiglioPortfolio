@@ -12,11 +12,7 @@ const { t } = useLanguage();
 
     <div class="content">
         <div class="contacts">
-            <div class="text">
-                <h2>{{  t('sections.contactsSection.h2') }} :</h2>
-                <p>{{  t('sections.contactsSection.p') }}</p>
-            </div>
-
+            <h3>{{  t('sections.contactsSection.h3') }}</h3>
             <div class="info">
                 <div class="label">
                     <Button icon="pi pi-whatsapp" severity="secondary" rounded size="large" class="hide-hover"></Button>
@@ -112,11 +108,8 @@ const { t } = useLanguage();
     gap: 1rem;
 }
 
-.text {
-    display: flex;
-    flex-direction: column;
+h3 {
     width: 100%;
-    gap: 1rem;
 }
 
 .footer {
