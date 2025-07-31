@@ -123,7 +123,7 @@ export default {
       },
       collab5: {
         name: "Prisca Zocca",
-        text: "Family Coach, Counselor y facilitadora de Constelaciones Familiares, además de profesional certificada en Kinesiología y Técnica Metamórfica. Juntas llevamos adelante Luminosa Vita, un camino dirigido a las familias para mejorar la comunicación y el equilibrio emocional.",
+        text: "Family Coach, Counselor y facilitadora de Constelaciones Familiares, además de profesional certificada en Kinesiología y Técnica Metamórfica. Juntas llevamos adelante Luminosa Vida, un camino dirigido a las familias para mejorar la comunicación y el equilibrio emocional.",
         alt: 'Foto de Prisca Zocca'
       },
       collab6: {
