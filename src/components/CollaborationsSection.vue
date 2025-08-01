@@ -1,6 +1,7 @@
 <script setup lang="ts">
 import { ref, computed } from "vue";
 
+import Fignon from '@/assets/Fignon.jpg';
 import Greco from '@/assets/Greco.jpg';
 import Lucci from '@/assets/Lucci.jpg';
 import Damaschi from '@/assets/Damaschi.jpg';
@@ -26,6 +27,13 @@ interface ResponsiveOption {
 }
 
 const products = computed( () =>[
+    {
+        name: t('sections.collabSection.collab0.name'),
+        image: Fignon,
+        alt: t('sections.collabSection.collab0.alt'),
+        text: t('sections.collabSection.collab0.text'),
+        link: 'https://www.alessiafignon.it/'
+    },
     {
         name: t('sections.collabSection.collab1.name'),
         image: Greco,

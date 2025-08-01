@@ -44,7 +44,7 @@ export default {
       },
       milestone5: {
         h1: 'Colaboraciones y reconocimientos',
-        p: 'Con el paso de los años, comencé a colaborar con médicos y profesionales de las terapias holísticas entre Italia y España. Desde 2022 formo parte del equipo de la Dra. Monica Greco como Coach A.M.A., y desde 2024 soy docente en su Academia de Naturopatía Científica del Terreno. En 2023, con la acreditación en la Asociación Profesional Española de Naturopatía y Bioterapia, nace oficialmente el Centro de Formación In Lumine.',
+        p: 'Con el paso de los años comencé a colaborar con médicos y profesionales de las terapias holísticas entre Italia y España. Desde 2022 formo parte del equipo de la Dra. Monica Greco como Coach A.M.A., y desde 2024 soy docente en su Academia de Naturopatía Científica del Terreno. En 2023, con la acreditación en la Asociación Profesional Española de Naturopatía y Bioterapia, nace oficialmente el Centro de Formación In Lumine.',
         alt: 'Monica con su colaboradora, la Dra. Greco'
       },
       milestone6: {
@@ -76,7 +76,7 @@ export default {
         name: "LUMINOSA VIDA",
         tag: "Online",
         alt: 'Un águila vuela sobre un bosque azul',
-        text: "Nacido para ayudar a las familias a superar dificultades relacionadas con la comunicación, la gestión emocional y los conflictos. El objetivo es crear relaciones más conscientes y armoniosas, brindando a cada persona las herramientas para enfrentar los desafíos cotidianos.",
+        text: "Creado para ayudar a las familias a superar dificultades relacionadas con la comunicación, la gestión emocional y los conflictos. El objetivo es crear relaciones más conscientes y armoniosas, brindando a cada persona las herramientas para enfrentar los desafíos cotidianos.",
       },
       service4: {
         name: "TÉCNICA METAMÓRFICA",
@@ -101,6 +101,11 @@ export default {
       title: 'COLABORADORES',
       h2: 'Creo en la fuerza de la sinergia',
       h3: 'Por eso colaboro con otros profesionales de la salud, ofreciendo un enfoque integral y personalizado al bienestar.',
+      collab0: {
+        name: "Dra. Alessia Fignon",
+        text: "Médica especialista en ginecología y obstetricia, experta en homeopatía, medicina integrativa, homeosinergia, maestra de danza oriental, Máster en Reiki Usui y Frecuencia Crística, lectora de segundo nivel de Registros Akáshicos.",
+        alt:'Foto de la Dra. Alessia Fignon',
+      },
       collab1: {
         name: "Dra. Monica Greco",
         text: "Médico Cirujano, Fisiatra, Investigadora, Médico de Señal y Docente especializada en Geriatría y Medicina Física y de Rehabilitación.",
@@ -113,7 +118,7 @@ export default {
       },
       collab3: {
         name: "Gloria Damaschi",
-        text: "Aromaterapeuta y creadora de la Aromaterapia del Terreno®, Docente y Vicepresidenta para Italia de la Asociación Profesional Española de Naturopatía y Bioterapia (APENB).",
+        text: "Aromaterapeuta y creadora de la Aromaterapia del Terreno®, Docente y Vicepresidenta en Italia de la Asociación Profesional Española de Naturopatía y Bioterapia (APENB).",
         alt: 'Foto de Gloria Damaschi'
       },
       collab4: {

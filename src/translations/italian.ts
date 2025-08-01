@@ -14,7 +14,7 @@ export default {
     aboutSection: {
         title: 'CHI SONO',
         h2: 'Sono Monica Giglio e mi occupo di naturopatia e discipline olistiche da circa 25 anni.',
-        p: 'Il mio obbiettivo é quello di accompagnare attraverso il benessere olistico, la trasformazione personale e l’evoluzione interiore.',
+        p: 'Il mio obiettivo é quello di accompagnare attraverso il benessere olistico, la trasformazione personale e l’evoluzione interiore.',
         p2: 'Sono guidata da una profonda passione per l’equilibrio e la connessione tra mente, corpo e spirito.',
         alt: 'Ritratto di Monica',
         button: 'SCARICA IL MIO CV',
@@ -101,9 +101,14 @@ export default {
       title: 'COLLABORATORI',
       h2: 'Credo nella forza della sinergia',
       h3: 'Per questo collaboro con altri professionisti della salute, offrendo un approccio integrato e personalizzato al benessere.',
+      collab0: {
+        name: "Dott.ssa Alessia Fignon",
+        text: "Medico specialista in ginecologia e ostetricia, esperta in omeopatia medicina integrata, omeosinergia, maestra di danza orientale, Master Reyki usui e frequenza Kristica, lettrice registri Akascici di secondo livello.",
+        alt: 'Foto della Dott.ssa Alessia Fignon'
+      },
       collab1: {
         name: "Dott.ssa Monica Greco",
-        text: "Medico Chirurgo, Fisiatra, Ricercatrice, Medico di Segnale e Docente specializzata in Geriatria e Medicina Fisica e della riabilitazione",
+        text: "Medico Chirurgo, Fisiatra, Ricercatrice, Medico di Segnale e Docente specializzata in Geriatria e Medicina Fisica e della riabilitazione.",
         alt: 'Foto della Dott.ssa Monica Greco'
       },
       collab2: {
