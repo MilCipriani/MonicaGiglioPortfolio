@@ -3,6 +3,7 @@ import { ref, computed } from "vue";
 
 import Fignon from '@/assets/Fignon.jpg';
 import Greco from '@/assets/Greco.jpg';
+import Wulhfard from '@/assets/Wulhfard.jpg';
 import Lucci from '@/assets/Lucci.jpg';
 import Damaschi from '@/assets/Damaschi.jpg';
 import Casano from '@/assets/Casano.jpg';
@@ -40,6 +41,12 @@ const products = computed( () =>[
         alt: t('sections.collabSection.collab1.alt'),
         text: t('sections.collabSection.collab1.text'),
         link: 'https://metatraining.it/'
+    },
+    {
+        name: t('sections.collabSection.collab7.name'),
+        image: Wulhfard,
+        alt: t('sections.collabSection.collab7.alt'),
+        text: t('sections.collabSection.collab7.text')
     },
     {
         name: t('sections.collabSection.collab2.name'),

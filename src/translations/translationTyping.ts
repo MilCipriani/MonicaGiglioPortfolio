@@ -111,6 +111,11 @@ export interface TranslationStructure {
         text: string;
         alt: string;
       };
+      collab7: {
+        name: string;
+        text: string;
+        alt: string;
+      };
       collab2: {
         name: string;
         text: string;
@@ -268,6 +273,9 @@ export type TranslationKey =
   | 'sections.collabSection.collab6.name'
   | 'sections.collabSection.collab6.text'
   | 'sections.collabSection.collab6.alt'
+  | 'sections.collabSection.collab7.name'
+  | 'sections.collabSection.collab7.text'
+  | 'sections.collabSection.collab7.alt'
   | 'sections.coursesSection.title'
   | 'sections.coursesSection.flyerLabel'
   | 'sections.coursesSection.moreInfo'

@@ -111,6 +111,11 @@ export default {
         text: "Medico Chirurgo, Fisiatra, Ricercatrice, Medico di Segnale e Docente specializzata in Geriatria e Medicina Fisica e della riabilitazione.",
         alt: 'Foto della Dott.ssa Monica Greco'
       },
+      collab7: {
+        name: "Dott.ssa Katya Wulhfard",
+        text: "Medico specialista in Medicina Interna e Medicina d’Urgenza, Naturopata, esperta in Omeopatia, Medicina Integrata, Medicina Omeosinergetica.",
+        alt:'Foto de la Dra. Katya Wulhfard',
+      },
       collab2: {
         name: "Dott.ssa Gabriella Lucci",
         text: "Psicologa Clinica, della Salute e Neurofisiologica INPP Italia e 'Provider Level Stimolazione uditiva Individualizzata Johansen (JISA)'. Esperta in disturbi dell’età evolutiva, anomalie dello sviluppo neuromotorio, disturbi dell’apprendimento.",
