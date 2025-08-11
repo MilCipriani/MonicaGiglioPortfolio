@@ -165,7 +165,7 @@ export default {
       course3: {
         date: '25 - 26 Apr 2026',
         name: 'Corso Volare Oltre',
-        location: 'Rivalta di Torino',
+        location: 'Treviso',
         teachers: 'Docenti Monica Giglio, Prisca Zocca e Gloria Damaschi',
         text: 'Due giorni di seminario intensivo nella profondità di te stesso per ri-conoscerti e trasformare il tuo vissuto in ali per volare oltre.',
         duration: '2 incontri'

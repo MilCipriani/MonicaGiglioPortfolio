@@ -118,9 +118,9 @@ const getSeverity = (status: Product['tag']): 'info' | 'warn' | 'null' => {
     <div class="section" id="services">
         <div class="title">
             <h1>{{  t('sections.servicesSection.title') }}</h1>
-            <Divider></Divider>
+            <Divider class="divider"></Divider>
         </div>
-        <Carousel :value="products" :numVisible="3" :numScroll="1" :responsiveOptions="responsiveOptions">
+        <Carousel :value="products" :numVisible="3" :numScroll="1" :responsiveOptions="responsiveOptions" circular>
             <template #item="slotProps">
                 <div class="card">
                     <h2>{{ slotProps.data.name }}</h2>
@@ -145,7 +145,7 @@ const getSeverity = (status: Product['tag']): 'info' | 'warn' | 'null' => {
 .section{
     display: flex;
     flex-direction: column;
-    gap: 5rem;
+    gap: 2rem;
     padding: 9rem 4rem 5rem 4rem;
     --p-carousel-indicator-active-background: var(--blue);
     --p-carousel-indicator-background: var(--light-blue);
@@ -154,27 +154,32 @@ const getSeverity = (status: Product['tag']): 'info' | 'warn' | 'null' => {
 .title{
     width: 100%;
     display: flex;
+    flex-wrap: wrap;
+    align-items: center;
     color: var(--light-blue);
     padding: 0 2rem;
 }
 
 .title h1{
+    flex-shrink: 0;
     white-space: nowrap;
     padding-right: 2rem;
+    margin: 0;
+}
+
+.divider {
+    flex: 1;
+    min-width: 5rem;
 }
 
 .card{
-    align-self: center;
-    justify-self: center;
-
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
 
-    width: 100%;
     gap: 1rem;
-    margin-bottom: 3rem;
+    margin: 0 1rem;
 }
 
 h2 {
@@ -189,12 +194,15 @@ p {
 
 .image-container {
     position: relative;
+    width: 100%;
+    max-width: 20rem;
+    align-self: center;
 }
 
 img{
     border-radius: 100%;
-    width: 20rem;
-    height: 20rem;
+    width: 100%;
+    aspect-ratio: 1 / 1;
     border: 1rem solid var(--light-blue);
     object-fit: cover;
 }
@@ -202,7 +210,7 @@ img{
 .button {
     position: absolute;
     bottom: 0;
-    right: 3rem;
+    right: 2rem;
 }
 
 .tag {
@@ -213,10 +221,9 @@ img{
 @media (max-width:950px) {
     .section {
         padding: 6rem 1rem 3rem 1rem;
-
     }
     .card p {
-        width: 20rem;
+        max-width: 20rem;
     }
     .card {
         margin-bottom: 1rem;
@@ -226,7 +233,6 @@ img{
 @media (max-width: 768px) {
     .section {
         padding: 7rem 0 5rem 0;
-
     }
 }
 </style>

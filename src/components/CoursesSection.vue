@@ -48,24 +48,33 @@ const products = computed( () =>[
         name: t('sections.coursesSection.course3.name'),
         location: t('sections.coursesSection.course3.location'),
         teachers: t('sections.coursesSection.course3.teachers'),
-        text: t('sections.coursesSection.course2.text'),
+        text: t('sections.coursesSection.course3.text'),
         link: 'https://inlumine.es/it/event/volare-oltre/',
         duration: t('sections.coursesSection.course3.duration'),
     },
 ]);
 
-const responsiveOptions = ref<ResponsiveOption[]>([
+const responsiveOptions = ref([
     {
         breakpoint: '1400px',
         numVisible: 2,
         numScroll: 1
     },
     {
-        breakpoint: '1000px',
-        numVisible: 1,
+        breakpoint: '1199px',
+        numVisible: 3,
         numScroll: 1
     },
-
+    {
+        breakpoint: '950px',
+        numVisible: 2,
+        numScroll: 1
+    },
+    {
+        breakpoint: '575px',
+        numVisible: 1,
+        numScroll: 1
+    }
 ]);
 
 const getSeverity = (status: Product['location']): 'info' | 'warn' => {
@@ -93,7 +102,7 @@ const getSeverity = (status: Product['location']): 'info' | 'warn' => {
                     <Tag :value="slotProps.data.location" :severity="getSeverity(slotProps.data.location)" icon="pi pi-map-marker" class="tag"/>
                     <div class="text">
                         <p class="teachers">{{ slotProps.data.teachers }}</p>
-                        <p class="description">{{ slotProps.data.text }}</p>
+                        <p>{{ slotProps.data.text }}</p>
                         <a v-if="slotProps.data.link" :href="slotProps.data.link" target="_blank" rel="noopener noreferrer">{{ t('sections.coursesSection.moreInfo') }}</a>
                     </div>
                     <div class="card-footer">
@@ -127,97 +136,83 @@ const getSeverity = (status: Product['location']): 'info' | 'warn' => {
 .title{
     width: 100%;
     display: flex;
+    flex-wrap: wrap;
+    align-items: center;
     color: var(--white);
+    padding: 0 2rem;
 }
 
 .title h1{
+    flex-shrink: 0;
     white-space: nowrap;
     padding-right: 2rem;
+    margin: 0;
 }
 
 .white-divider {
     --p-divider-border-color: var(--white);
+    flex: 1;
+    min-width: 5rem;
 }
 
 .card{
-    align-self: center;
-    justify-self: center;
-
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: start;
-
-    width: 22.5rem;
-    height: 100%;
-    padding: 1.5rem;
-    margin: 0 auto 3rem auto;
+    background-color: var(--white);
     border: 0.4rem solid var(--light-blue);
     border-radius: 3rem;
-    background-color: var(--white);
+    padding: 1.5rem;
+    margin: 0 1rem;
 }
 
 .date {
-    width: 100%;
     display: flex;
+    justify-self: flex-end;
     align-items: center;
-    justify-content: end;
-    gap: 1rem;
+    gap: 0.5rem;
+    margin-bottom: 0.5rem;
 }
 
-h2 {
-    align-self: start;
-    height: 4.5rem;
-    margin-top: 1rem;
+.pi {
+    color: var(--light-blue);
 }
 
 .tag {
-    border-radius: 100rem;
-    align-self: start;
-    margin-top: 1rem;
+    border-radius: 10rem;
+    padding: 0.1rem 0.5rem;
+    margin-top: 0.3rem;
 }
 
 .text {
-    text-align: justify;
-    margin-top: 2rem;
-    margin-bottom: auto;
+    margin: 1.5rem 0;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
 }
 
 .text a {
-    font-family: 'CrimsonPro';
     color: var(--light-blue);
-}
-p {
-    text-align: justify;
+    font-size: 0.9rem;
 }
 
 .teachers {
-    margin-bottom: 1rem;
-}
-
-.description {
-    margin-bottom: 2rem;
+    font-weight: 100;
 }
 
 .card-footer {
     display: flex;
-    width: 100%;
+    margin: 0 auto;
+    justify-content: space-between;
 }
 
 .flyer {
-    width: 50%;
-    justify-self: start;
-    border-radius: 50rem;
+    border-radius: 10rem;
+    padding: 0.8rem 1rem;
 }
 
 .duration {
     display: flex;
     align-items: center;
-    justify-content: end;
-    width: 50%;
-    gap: 1rem;
+    gap: 0.5rem;
     margin-left: auto;
-    padding-left: 1rem;
 }
 
 
@@ -227,14 +222,6 @@ p {
     }
     .title {
         padding: 0 2rem;
-    }
-    .card{
-        width: 75vw;
-        max-width: 22.5rem;
-    }
-    .description {
-        width: 65vw;
-        max-width: 20rem;
     }
 }
 

@@ -29,9 +29,8 @@ const { t } = useLanguage();
   position: relative;
   width: 100%;
   height: 100vh;
-  margin-top: 8rem;
   overflow: hidden;
-  max-height: 960px;
+  padding-top: 8rem;
 }
 
 .background-video {
@@ -48,6 +47,8 @@ const { t } = useLanguage();
 
 .content-overlay {
   position: relative;
+  top: 0;
+  right: 0;
   z-index: 1;
   height: 100%;
   display: flex;
@@ -55,7 +56,6 @@ const { t } = useLanguage();
   justify-content: space-around;
   align-items: center;
   padding: 2rem;
-  gap: 30rem;
 }
 
 .logo{
@@ -72,18 +72,12 @@ const { t } = useLanguage();
 
 @media (max-width: 1050px) {
   .hero-section {
-    max-height: 600px;
+    max-height: calc(100vh + 8rem);
   }
-  
-  .content-overlay {
-    gap: 20rem;
-  }
-
   .logo {
     width: 10rem;
     height: 10rem;
   }
-  
   .tagline {
     font-size: 1.5rem;
   }
@@ -91,7 +85,7 @@ const { t } = useLanguage();
 
 @media (max-width: 768px) {
     .hero-section {
-        margin-top: 6rem;
+        padding-top: 6rem;
     }
 }
 </style>

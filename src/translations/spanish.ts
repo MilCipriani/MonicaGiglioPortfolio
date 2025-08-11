@@ -165,7 +165,7 @@ export default {
       course3: {
         date: '25 - 26 Abr 2026',
         name: 'Curso Volar Más Allá',
-        location: 'Rivalta di Torino',
+        location: 'Treviso',
         teachers: 'Docentes Monica Giglio, Prisca Zocca y Gloria Damaschi',
         text: 'Dos días de seminario intensivo para profundizar en ti mismo, reconocerte y transformar tu experiencia en alas para volar más allá.',
         duration: '2 encuentros'

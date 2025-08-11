@@ -102,13 +102,13 @@ const responsiveOptions = ref<ResponsiveOption[]>([
         
         <div class="title">
             <h1>{{  t('sections.collabSection.title') }}</h1>
-            <Divider></Divider>
+            <Divider class="divider"></Divider>
         </div>
         <div class="text">
             <h2>{{  t('sections.collabSection.h2') }}</h2>
             <h3>{{  t('sections.collabSection.h3') }}</h3>            
         </div>
-        <Carousel :value="products" :numVisible="3" :numScroll="1" :responsiveOptions="responsiveOptions">
+        <Carousel :value="products" :numVisible="3" :numScroll="1" :responsiveOptions="responsiveOptions" circular>
             <template #item="slotProps">
                 <div class="card">
                     <h3 style="text-transform: uppercase;">{{ slotProps.data.name }}</h3>
@@ -134,7 +134,7 @@ const responsiveOptions = ref<ResponsiveOption[]>([
 
     display: flex;
     flex-direction: column;
-    gap: 3rem;
+    gap: 2rem;
     padding: 9rem 4rem 5rem 4rem;
     --p-carousel-indicator-active-background: var(--blue);
     --p-carousel-indicator-background: var(--light-blue);
@@ -148,12 +148,21 @@ const responsiveOptions = ref<ResponsiveOption[]>([
 .title{
     width: 100%;
     display: flex;
+    flex-wrap: wrap;
+    align-items: center;
     color: var(--light-blue);
 }
 
 .title h1{
+    flex-shrink: 0;
     white-space: nowrap;
     padding-right: 2rem;
+    margin: 0;
+}
+
+.divider {
+    flex: 1;
+    min-width: 5rem;
 }
 
 .text{
@@ -161,11 +170,12 @@ const responsiveOptions = ref<ResponsiveOption[]>([
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    margin-bottom: 2rem;
 }
 
 .text h2{
-    margin: 1rem auto;
-    width: 30rem;
+    margin: 1rem 0;
+    max-width: 30rem;
 }
 
 .text h3 {
@@ -174,18 +184,13 @@ const responsiveOptions = ref<ResponsiveOption[]>([
 }
 
 .card{
-    align-self: center;
-    justify-self: center;
+    margin: 0 1rem;
     display: flex;
     flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    width: 22.5rem;
     gap: 1rem;
-    margin-bottom: 2rem;
 }
 
-h2 {
+h3 {
     text-align: center;
 }
 
@@ -196,12 +201,15 @@ p {
 
 .image-container {
     position: relative;
+    width: 100%;
+    max-width: 20rem;
+    align-self: center;
 }
 
 img{
     border-radius: 100%;
-    width: 15rem;
-    height: 15rem;
+    width: 100%;
+    aspect-ratio: 1 / 1;
     border: 1rem solid var(--light-blue);
     object-fit: cover;
 }
@@ -209,11 +217,7 @@ img{
 .button {
     position: absolute;
     bottom: 0;
-    right: 3rem;
-}
-
-.tag {
-    border-radius: 100rem;
+    right: 2rem;
 }
 
 
@@ -224,18 +228,15 @@ img{
     .title {
         padding: 0 2rem;
     }
-    .card p {
-        width: 20rem;
-    }
-    .card{
-        width: 75vw;
-    }
 }
 
 @media (max-width: 768px) {
     .section {
-        padding: 7rem 0 2rem 0;
+        padding: 7rem 1rem 2rem 1rem;
         margin-bottom: 0;
+    }
+    img {
+        border: 0.8rem solid var(--light-blue);
 
     }
 }

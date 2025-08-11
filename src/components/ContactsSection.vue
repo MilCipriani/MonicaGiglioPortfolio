@@ -7,7 +7,7 @@ const { t } = useLanguage();
   <div class="section" id="contacts">    
     <div class="title">
         <h1>{{  t('sections.contactsSection.title') }}</h1>
-        <Divider></Divider>
+        <Divider class="divider"></Divider>
     </div>
 
     <div class="content">
@@ -61,12 +61,22 @@ const { t } = useLanguage();
 .title{
     width: 100%;
     display: flex;
+    flex-wrap: wrap;
+    align-items: center;
     color: var(--light-blue);
+    padding: 0 2rem;
 }
 
 .title h1{
+    flex-shrink: 0;
     white-space: nowrap;
     padding-right: 2rem;
+    margin: 0;
+}
+
+.divider {
+    flex: 1;
+    min-width: 5rem;
 }
 
 .content {
