@@ -49,6 +49,21 @@ html {
   }
 }
 
+@media (max-width: 375px) {
+  html {
+    font-size: 14px
+  }
+  h1 {
+    font-size: 1.3rem;
+  }
+  h2 {
+    font-size: 1.1rem;
+  }
+  h3 {
+    font-size: 1rem;
+  }
+}
+
 body {
   min-height: 100vh;
   color: var(--color-text);

@@ -70,7 +70,7 @@ const items = computed(() =>[
     <div class="section" id="history">
         <div class="title">
             <h1>{{ t('sections.historySection.title') }}</h1>
-            <Divider></Divider>
+            <Divider class="divider"></Divider>
         </div>
 
         <div class="timeline">
@@ -139,12 +139,21 @@ const items = computed(() =>[
 .title{
     width: 100%;
     display: flex;
+    flex-wrap: wrap;
+    align-items: center;
     color: var(--light-blue);
 }
 
 .title h1{
+    flex-shrink: 0;
     white-space: nowrap;
     padding-right: 2rem;
+    margin: 0;
+}
+
+.divider {
+    flex: 1;
+    min-width: 5rem;
 }
 
 .timeline{
@@ -306,7 +315,7 @@ const items = computed(() =>[
         gap: 2rem;
     }
     .text {
-        width: 25rem;
+        max-width: 25rem;
     }
     .geometry3 {
         width: 30rem;

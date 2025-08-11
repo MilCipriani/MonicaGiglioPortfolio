@@ -16,7 +16,7 @@ const downloadFile = (): void => {
     <div class="section" id="about">
         <div class="title">
             <h1>{{ t('sections.aboutSection.title') }}</h1>
-            <Divider></Divider>
+            <Divider class="divider"></Divider>
         </div>
         <div class="content">
             <img src="@/assets/profilePicSquared.jpg" :alt="t('sections.aboutSection.alt')">
@@ -46,12 +46,21 @@ const downloadFile = (): void => {
 .title{
     width: 100%;
     display: flex;
+    flex-wrap: wrap;
+    align-items: center;
     color: var(--light-blue);
 }
 
 .title h1{
+    flex-shrink: 0;
     white-space: nowrap;
     padding-right: 2rem;
+    margin: 0;
+}
+
+.divider {
+    flex: 1;
+    min-width: 5rem;
 }
 
 .content{
@@ -64,7 +73,7 @@ const downloadFile = (): void => {
 }
 
 .text{
-    width: 32rem;
+    max-width: 32rem;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -82,7 +91,7 @@ const downloadFile = (): void => {
 img{
     border-radius: 100%;
     width: 35rem;
-    height: 35rem;
+    aspect-ratio: 1 / 1;
     border: 1rem solid var(--light-blue);
 }
 
@@ -96,7 +105,7 @@ img{
         gap: 3rem;
     }
     .text {
-        width: 30rem;
+        max-width: 30rem;
         gap: 3rem;
     }
     img {
@@ -113,7 +122,19 @@ img{
         gap: 2rem;
     }
     .text {
-        width: 25rem;
+        max-width: 25rem;
+    }
+}
+
+@media (max-width: 375px) {
+    .section {
+        padding: 20rem 2rem 5rem 2rem;
+    }
+    .content {
+        gap: 2rem;
+    }
+    .text {
+        max-width: 25rem;
     }
 }
 
