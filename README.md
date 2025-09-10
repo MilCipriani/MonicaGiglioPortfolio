@@ -1,43 +1,47 @@
-# monicagiglio
+# Client Portfolio
 
-This template should help get you started developing with Vue 3 in Vite.
+Complete single-page application developed for a client's professional portfolio. The focus was on creating a unique digital presence that authentically represents the client's professional brand while maintaining high technical standards.
 
-## Recommended IDE Setup
+## 🛠 Tech Stack
+Design: Figma - completely custom and personalized to the client's aesthetic and communicative requirements
+Frontend: Vue.js, TypeScript, PrimeVue
+CI/CD: GitHub Actions + GitHub Pages with custom domain
 
-[VSCode](https://code.visualstudio.com/) + [Volar](https://marketplace.visualstudio.com/items?itemName=Vue.volar) (and disable Vetur).
+## ✨ Features
 
-## Type Support for `.vue` Imports in TS
+### Custom Design & Branding
+- Bespoke design created in Figma
+- Tailored aesthetic to match client's brand identity
+- Responsive layout across all device sizes - Mobile first
+- Thoughtful typography and visual hierarchy
 
-TypeScript cannot handle type information for `.vue` imports by default, so we replace the `tsc` CLI with `vue-tsc` for type checking. In editors, we need [Volar](https://marketplace.visualstudio.com/items?itemName=Vue.volar) to make the TypeScript language service aware of `.vue` types.
+### Performance & SEO
+- Optimized load times and Core Web Vitals
+- Semantic HTML structure for search engines
+- Meta tags and Open Graph optimization
+- Efficient asset loading and compression
 
-## Customize configuration
+### Accessibility & UX
+- WCAG-compliant implementation
+- Keyboard navigation support
+- Screen reader compatibility
+- Cross-browser testing and optimization
 
-See [Vite Configuration Reference](https://vite.dev/config/).
+### Development
+- TypeScript for enhanced maintainability
+- Component-based architecture with PrimeVue
+- Clean, scalable codebase structure
 
-## Project Setup
+## ⚙️ Development
 
-```sh
-npm install
+```bash
+npm run dev       # Start development server
+npm run build     # Create production build
+npm run preview   # Preview production build
 ```
 
-### Compile and Hot-Reload for Development
+## 🚀 Deployment
 
-```sh
-npm run dev
-```
-
-```sh
-npm run dev -- --host
-```
-
-### Type-Check, Compile and Minify for Production
-
-```sh
-npm run build
-```
-
-### Lint with [ESLint](https://eslint.org/)
-
-```sh
-npm run lint
-```
+Automated CI/CD pipeline using GitHub Actions:
+- Automated builds on code changes
+- Custom domain configuration
