@@ -12,7 +12,8 @@ const { t } = useLanguage();
       autoplay
       muted
       loop
-      playsinline
+      playsinline 
+      preload="auto"
     >
       <source src="@/assets/FeatherBackground.mp4" type="video/mp4">
     </video>

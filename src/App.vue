@@ -13,21 +13,6 @@ import ContactsSection from './components/ContactsSection.vue';
 import type { SupportedLanguages } from '@/translations/translationTyping.ts';
 import { useLanguage } from './translations/index';
 
-// Preload hero video
-(async () => {
-  try {
-    const videoUrl = (await import('@/assets/FeatherBackground.mp4' as string)).default;
-    const link = document.createElement('link');
-    link.rel = 'preload';
-    link.href = videoUrl;
-    link.as = 'fetch';
-    link.crossOrigin = 'anonymous';
-    document.head.appendChild(link);
-  } catch (error) {
-    console.warn('Failed to preload hero video:', error);
-  }
-})();
-
 const { setLanguage } = useLanguage();
 const savedLang = localStorage.getItem('preferred-language') as SupportedLanguages;
 const validLanguage: SupportedLanguages = (savedLang === 'it' || savedLang === 'es') ? savedLang : 'it';
