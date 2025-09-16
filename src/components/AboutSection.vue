@@ -95,6 +95,12 @@ img{
     border: 1rem solid var(--light-blue);
 }
 
+@media (min-width: 1050px) and (max-width: 1280px) {
+    img {
+        width: 25rem;
+        height: 25rem;
+    }
+}
 
 @media (max-width: 1050px) {
     .section {
@@ -139,11 +145,12 @@ img{
 }
 
 /*rotated phones*/
+/*
 @media screen and (orientation: landscape) and (max-height: 1050px) {
     .section {
         height: auto;
         padding: 9rem 2rem 5rem 2rem;
 
     }
-}
+}*/
 </style>

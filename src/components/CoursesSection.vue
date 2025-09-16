@@ -62,16 +62,16 @@ const responsiveOptions = ref([
     },
     {
         breakpoint: '1199px',
-        numVisible: 3,
-        numScroll: 1
-    },
-    {
-        breakpoint: '950px',
         numVisible: 2,
         numScroll: 1
     },
     {
-        breakpoint: '575px',
+        breakpoint: '767px',
+        numVisible: 2,
+        numScroll: 1
+    },
+    {
+        breakpoint: '640px',
         numVisible: 1,
         numScroll: 1
     }
@@ -139,7 +139,6 @@ const getSeverity = (status: Product['location']): 'info' | 'warn' => {
     flex-wrap: wrap;
     align-items: center;
     color: var(--white);
-    padding: 0 2rem;
 }
 
 .title h1{
@@ -156,11 +155,14 @@ const getSeverity = (status: Product['location']): 'info' | 'warn' => {
 }
 
 .card{
+    display: flex;
+    flex-direction: column;
     background-color: var(--white);
     border: 0.4rem solid var(--light-blue);
     border-radius: 3rem;
     padding: 1.5rem;
     margin: 0 1rem;
+    height: 100%;
 }
 
 .date {
@@ -179,6 +181,7 @@ const getSeverity = (status: Product['location']): 'info' | 'warn' => {
     border-radius: 10rem;
     padding: 0.1rem 0.5rem;
     margin-top: 0.3rem;
+    width: fit-content;
 }
 
 .text {
@@ -199,7 +202,7 @@ const getSeverity = (status: Product['location']): 'info' | 'warn' => {
 
 .card-footer {
     display: flex;
-    margin: 0 auto;
+    margin-top: auto;
     justify-content: space-between;
 }
 
@@ -215,6 +218,11 @@ const getSeverity = (status: Product['location']): 'info' | 'warn' => {
     margin-left: auto;
 }
 
+@media (min-width:1199px) {
+    .card {
+        margin: 0 2rem;
+    }
+}
 
 @media (max-width:950px) {
     .section {
@@ -228,6 +236,12 @@ const getSeverity = (status: Product['location']): 'info' | 'warn' => {
 @media (max-width: 768px) {
     .section {
         padding: 7rem 0 5rem 0;
+    }
+}
+
+@media (min-width: 500px) and ( max-width: 640px) {
+    .card {
+        margin: 0 4rem;
     }
 }
 

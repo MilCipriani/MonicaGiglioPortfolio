@@ -48,7 +48,7 @@ const items = computed(() =>[
                 </a>
             </template>
             <template #item="{ item }">
-                <a :href="item.href">
+                <a :href="item.href" role="button">
                     <img v-if="item.icon" :src="item.icon" alt="Language icon" class="lang" @click="toggleLanguage">
                     <span v-if="item.label">{{ item.label }}</span>
                 </a>
