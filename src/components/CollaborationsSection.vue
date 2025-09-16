@@ -86,7 +86,7 @@ const responsiveOptions = ref<ResponsiveOption[]>([
     {
         breakpoint: '1400px',
         numVisible: 2,
-        numScroll: 1
+        numScroll: 2
     },
     {
         breakpoint: '1000px',
@@ -108,14 +108,14 @@ const responsiveOptions = ref<ResponsiveOption[]>([
             <h2>{{  t('sections.collabSection.h2') }}</h2>
             <h3>{{  t('sections.collabSection.h3') }}</h3>            
         </div>
-        <Carousel :value="products" :numVisible="3" :numScroll="1" :responsiveOptions="responsiveOptions" circular>
+        <Carousel :value="products" :numVisible="3" :numScroll="3" :responsiveOptions="responsiveOptions" >
             <template #item="slotProps">
                 <div class="card">
                     <h3 style="text-transform: uppercase;">{{ slotProps.data.name }}</h3>
                     <div class="image-container">
                         <img :src="slotProps.data.image" :alt="slotProps.data.alt"/>
                         <a v-if="slotProps.data.link" :href="slotProps.data.link" target="_blank" rel="noopener noreferrer">
-                            <Button icon="pi pi-arrow-right" size="large" rounded class="button"></Button>
+                            <Button icon="pi pi-arrow-right" size="large" rounded class="button" v-bind:aria-label="t('sections.aria.ariaLabelMoreinfo')"></Button>
                         </a>
                     </div>
                     

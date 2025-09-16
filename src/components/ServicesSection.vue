@@ -87,7 +87,7 @@ const responsiveOptions = ref<ResponsiveOption[]>([
     {
         breakpoint: '1400px',
         numVisible: 2,
-        numScroll: 1
+        numScroll: 2
     },
     {
         breakpoint: '1000px',
@@ -120,14 +120,14 @@ const getSeverity = (status: Product['tag']): 'info' | 'warn' | 'null' => {
             <h1>{{  t('sections.servicesSection.title') }}</h1>
             <Divider class="divider"></Divider>
         </div>
-        <Carousel :value="products" :numVisible="3" :numScroll="1" :responsiveOptions="responsiveOptions" circular>
+        <Carousel :value="products" :numVisible="3" :numScroll="3" :responsiveOptions="responsiveOptions" circular>
             <template #item="slotProps">
                 <div class="card">
                     <h2>{{ slotProps.data.name }}</h2>
                     <div class="image-container">
                         <img :src="slotProps.data.image" :alt="slotProps.data.alt"/>
                         <a v-if="slotProps.data.link" :href="slotProps.data.link" target="_blank" rel="noopener noreferrer">
-                            <Button icon="pi pi-arrow-right" size="large" rounded class="button"></Button>
+                            <Button icon="pi pi-arrow-right" size="large" rounded class="button" v-bind:aria-label="t('sections.aria.ariaLabelMoreinfo')"></Button>
                         </a>
                         
                     </div>
@@ -157,7 +157,6 @@ const getSeverity = (status: Product['tag']): 'info' | 'warn' | 'null' => {
     flex-wrap: wrap;
     align-items: center;
     color: var(--light-blue);
-    padding: 0 2rem;
 }
 
 .title h1{

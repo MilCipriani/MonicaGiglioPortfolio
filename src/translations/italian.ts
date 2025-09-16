@@ -180,6 +180,11 @@ export default {
       h3: 'Se ti trovi qui, il tuo viaggio è già iniziato. Qualunque sia il motivo, sono felice di accompagnarti nella tua trasformazione.',
       follow: 'SEGUIMI',
       allRightsReserved: '© 2025 Monica Giglio. Tutti i diritti riservati.'
+    },
+    aria: {
+      ariaLabelMoreinfo: "Visita questa pagina per maggiori info",
+      ariaLabelVisitInstagram: "Visita la mia pagina Instagram",
+      ariaLabelVisitFacebook: "Visita la mia pagina Facebook",
     }
 
   }

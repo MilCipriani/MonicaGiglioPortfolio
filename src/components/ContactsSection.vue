@@ -15,14 +15,14 @@ const { t } = useLanguage();
             <h3>{{  t('sections.contactsSection.h3') }}</h3>
             <div class="info">
                 <div class="label">
-                    <Button icon="pi pi-whatsapp" severity="secondary" rounded size="large" class="hide-hover"></Button>
+                    <Button icon="pi pi-whatsapp" severity="secondary" rounded size="large" class="hide-hover" aria-disabled="true"></Button>
                     <div class="contact-text">
                         <p>Whatsapp</p>
                         <p>+34 677164112</p>
                     </div>
                 </div>
                 <div class="label">
-                    <Button icon="pi pi-google" severity="secondary" rounded size="large" class="hide-hover"></Button>
+                    <Button icon="pi pi-google" severity="secondary" rounded size="large" class="hide-hover" aria-disabled="true"></Button>
                     <div class="contact-text">
                         <p>E-Mail</p>
                         <p>naturopatagiglio@gmail.com</p>
@@ -34,11 +34,11 @@ const { t } = useLanguage();
         <div class="socials">
             <h2>{{  t('sections.contactsSection.follow') }} :</h2>
             <div class="social-icons">
-                <a href="https://instagram.com/naturopata.monica.giglio" target="_blank" rel="noopener noreferrer">
-                    <Button icon="pi pi-instagram" severity="secondary" rounded size="large"></Button>
+                <a href="https://instagram.com/naturopata.monica.giglio" target="_blank" rel="noopener noreferrer" v-bind:aria-label="t('sections.aria.ariaLabelVisitInstagram')">
+                    <Button icon="pi pi-instagram" severity="secondary" rounded size="large" aria-disabled="true"></Button>
                 </a>
-                <a href="https://facebook.com/monica.giglio.7" target="_blank" rel="noopener noreferrer">
-                    <Button icon="pi pi-facebook" severity="secondary" rounded size="large"></Button>
+                <a href="https://facebook.com/monica.giglio.7" target="_blank" rel="noopener noreferrer" v-bind:aria-label="t('sections.aria.ariaLabelVisitFacebook')">
+                    <Button icon="pi pi-facebook" severity="secondary" rounded size="large" aria-disabled="true"></Button>
                 </a>
             </div>
         </div>
@@ -64,7 +64,6 @@ const { t } = useLanguage();
     flex-wrap: wrap;
     align-items: center;
     color: var(--light-blue);
-    padding: 0 2rem;
 }
 
 .title h1{

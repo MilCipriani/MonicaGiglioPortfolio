@@ -181,6 +181,11 @@ export interface TranslationStructure {
       follow: string;
       allRightsReserved: string;
     };
+    aria: {
+      ariaLabelMoreinfo: string;
+      ariaLabelVisitInstagram: string;
+      ariaLabelVisitFacebook: string;
+    }
   };
 }
 
@@ -302,4 +307,7 @@ export type TranslationKey =
   | 'sections.contactsSection.title'
   | 'sections.contactsSection.h3'
   | 'sections.contactsSection.follow'
-  | 'sections.contactsSection.allRightsReserved';
+  | 'sections.contactsSection.allRightsReserved'
+  | 'sections.aria.ariaLabelMoreinfo'
+  | 'sections.aria.ariaLabelVisitInstagram'
+  | 'sections.aria.ariaLabelVisitFacebook';
