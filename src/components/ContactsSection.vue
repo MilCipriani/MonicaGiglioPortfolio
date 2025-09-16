@@ -34,11 +34,11 @@ const { t } = useLanguage();
         <div class="socials">
             <h2>{{  t('sections.contactsSection.follow') }} :</h2>
             <div class="social-icons">
-                <a href="https://instagram.com/naturopata.monica.giglio" target="_blank" rel="noopener noreferrer" v-bind:aria-label="t('sections.aria.ariaLabelVisitInstagram')">
-                    <Button icon="pi pi-instagram" severity="secondary" rounded size="large" aria-disabled="true"></Button>
+                <a href="https://instagram.com/naturopata.monica.giglio" target="_blank" rel="noopener noreferrer" class="button-link" v-bind:aria-label="t('sections.aria.ariaLabelVisitInstagram')">
+                    <i class="pi pi-instagram" style="font-size: 2rem; color: var(--white);"></i>
                 </a>
-                <a href="https://facebook.com/monica.giglio.7" target="_blank" rel="noopener noreferrer" v-bind:aria-label="t('sections.aria.ariaLabelVisitFacebook')">
-                    <Button icon="pi pi-facebook" severity="secondary" rounded size="large" aria-disabled="true"></Button>
+                <a href="https://facebook.com/monica.giglio.7" target="_blank" rel="noopener noreferrer" class="button-link" v-bind:aria-label="t('sections.aria.ariaLabelVisitFacebook')">
+                    <i class="pi pi-facebook" style="font-size: 2rem; color: var(--white);"></i>
                 </a>
             </div>
         </div>

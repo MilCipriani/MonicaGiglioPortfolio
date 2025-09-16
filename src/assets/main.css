@@ -43,3 +43,14 @@ h2{
 .p-icon {
   color: var(--blue);
 }
+
+.button-link {
+  border-radius: 100%;
+  color: var(--white);
+  background-color: var(--blue);
+  width: 3.5rem;
+  height: 3.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
