@@ -15,14 +15,14 @@ const { t } = useLanguage();
             <h3>{{  t('sections.contactsSection.h3') }}</h3>
             <div class="info">
                 <div class="label">
-                    <Button icon="pi pi-whatsapp" severity="secondary" rounded size="large" class="hide-hover" aria-disabled="true"></Button>
+                    <Button icon="pi pi-whatsapp" severity="secondary" rounded size="large" class="hide-hover" aria-disabled="true" aria-label="Whatsapp"></Button>
                     <div class="contact-text">
                         <p>Whatsapp</p>
                         <p>+34 677164112</p>
                     </div>
                 </div>
                 <div class="label">
-                    <Button icon="pi pi-google" severity="secondary" rounded size="large" class="hide-hover" aria-disabled="true"></Button>
+                    <Button icon="pi pi-google" severity="secondary" rounded size="large" class="hide-hover" aria-disabled="true" aria-label="Mail"></Button>
                     <div class="contact-text">
                         <p>E-Mail</p>
                         <p>naturopatagiglio@gmail.com</p>
