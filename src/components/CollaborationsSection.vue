@@ -13,14 +13,6 @@ import { useLanguage } from '@/translations/index';
 
 const { t } = useLanguage();
 
-interface Product {
-    name: string;
-    image: string;
-    alt: string;
-    text: string;
-    link?: string;
-}
-
 interface ResponsiveOption {
     breakpoint: string;
     numVisible: number;
@@ -223,16 +215,13 @@ img{
 
 @media (max-width:950px) {
     .section {
-        padding: 3rem 1rem 5rem 1rem;
-    }
-    .title {
-        padding: 0 2rem;
+        padding: 3rem 2rem 5rem 2rem;
     }
 }
 
 @media (max-width: 768px) {
     .section {
-        padding: 7rem 1rem 2rem 1rem;
+        padding: 7rem 2rem 2rem 2rem;
         margin-bottom: 0;
     }
     img {

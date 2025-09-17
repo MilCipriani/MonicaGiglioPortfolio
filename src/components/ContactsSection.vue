@@ -145,4 +145,10 @@ h3 {
         height: auto;
     }
 }
+
+@media (max-width: 768px) {
+    .section {
+        padding: 9rem 2rem 4rem 2rem;
+    }
+}
 </style>

@@ -231,7 +231,7 @@ img{
 
 @media (max-width: 768px) {
     .section {
-        padding: 7rem 0 5rem 0;
+        padding: 7rem 2rem 5rem 2rem;
     }
 }
 </style>

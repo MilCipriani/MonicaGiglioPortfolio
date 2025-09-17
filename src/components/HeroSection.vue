@@ -14,6 +14,7 @@ const { t } = useLanguage();
       loop
       playsinline 
       preload="auto"
+      poster="@/assets/featherPlaceholder.jpg"
     >
       <source src="@/assets/FeatherBackground.mp4" type="video/mp4">
     </video>
