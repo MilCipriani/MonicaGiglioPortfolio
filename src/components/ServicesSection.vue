@@ -35,7 +35,7 @@ const products = computed (() => [
         image: soul,
         alt: t('sections.servicesSection.service1.alt'),
         text: t('sections.servicesSection.service1.text'),
-        link: 'https://inlumine.es/it/services/coach-emozionale/'
+        link: 'https://inlumine.es/services/soul'
     },
     {
         id: 2,
@@ -44,7 +44,7 @@ const products = computed (() => [
         image: LumEss,
         alt: t('sections.servicesSection.service2.alt'),
         text: t('sections.servicesSection.service2.text'),
-        link: 'https://inlumine.es/it/services/luminosa-essenza/'
+        link: 'https://inlumine.es/services/essenza'
     },
     {
         id: 3,
@@ -53,6 +53,7 @@ const products = computed (() => [
         image: LumVita,
         alt: t('sections.servicesSection.service3.alt'),
         text: t('sections.servicesSection.service3.text'),
+        link: 'https://inlumine.es/services/vita'
     },
     {
         id: 4,
@@ -61,7 +62,7 @@ const products = computed (() => [
         image: metamorfica,
         alt: t('sections.servicesSection.service4.alt'),
         text: t('sections.servicesSection.service4.text'),
-        link: 'https://inlumine.es/it/event/corso-tecnica-metamorfica/'
+        link: 'https://inlumine.es/services/meta'
     },
     {
         id: 5,
@@ -70,7 +71,7 @@ const products = computed (() => [
         image: albero,
         alt: t('sections.servicesSection.service5.alt'),
         text: t('sections.servicesSection.service5.text'),
-        link: 'https://inlumine.es/it/services/decodificazione-epigenetica-dell-albero-genealogico/'
+        link: 'https://inlumine.es/services/albero'
     },
     {
         id: 6,
@@ -79,7 +80,7 @@ const products = computed (() => [
         image: RiflPlant,
         alt: t('sections.servicesSection.service6.alt'),
         text: t('sections.servicesSection.service6.text'),
-        link: 'https://inlumine.es/it/event/riflessologia-plantare/'
+        link: 'https://inlumine.es/services/riflex'
     },
 ]);
 

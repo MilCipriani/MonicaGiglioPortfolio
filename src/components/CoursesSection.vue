@@ -16,12 +16,6 @@ interface Product {
     duration: string;
 }
 
-interface ResponsiveOption {
-    breakpoint: string;
-    numVisible: number;
-    numScroll: number;
-}
-
 /*When updating courses t('sections.coursesSection.flyerLabel') is the label for the flyer download button if present*/
 const products = computed( () =>[
     {
@@ -30,7 +24,7 @@ const products = computed( () =>[
         location: t('sections.coursesSection.course1.location'),
         teachers: t('sections.coursesSection.course1.teachers'),
         text: t('sections.coursesSection.course1.text'),
-        link: 'https://inlumine.es/it/event/riflessologia-plantare/',
+        link: 'https://inlumine.es/courses/RiflessologiaPlantare',
         duration: t('sections.coursesSection.course1.duration'),
         //flyer: t('sections.coursesSection.flyerLabel')
     },
@@ -40,7 +34,7 @@ const products = computed( () =>[
         location: t('sections.coursesSection.course2.location'),
         teachers: t('sections.coursesSection.course2.teachers'),
         text: t('sections.coursesSection.course2.text'),
-        link: 'https://inlumine.es/it/event/corso-tecnica-metamorfica/',
+        link: 'https://inlumine.es/courses/TecnicaMetamorfica',
         duration: t('sections.coursesSection.course2.duration'),
     },
     {
@@ -49,7 +43,7 @@ const products = computed( () =>[
         location: t('sections.coursesSection.course3.location'),
         teachers: t('sections.coursesSection.course3.teachers'),
         text: t('sections.coursesSection.course3.text'),
-        link: 'https://inlumine.es/it/event/volare-oltre/',
+        link: 'https://inlumine.es/courses/VolareOltre',
         duration: t('sections.coursesSection.course3.duration'),
     },
 ]);
