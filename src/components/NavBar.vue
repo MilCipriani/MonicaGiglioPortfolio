@@ -34,7 +34,7 @@ const items = computed(() =>[
     { label: t('nav.contacts'),
         href: '#contacts',
     },
-    { icon: currentLanguage.value === 'it' ? esIcon : itIcon },
+    { icon: currentLanguage.value === 'it' ? itIcon : esIcon },
 ]);
 </script>
 
