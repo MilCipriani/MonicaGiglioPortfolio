@@ -16,6 +16,7 @@ const { t } = useLanguage();
       preload="auto"
       poster="@/assets/featherPlaceholder.jpg"
     >
+      <source src="@/assets/FeatherBackground.webm" type="video/webm">
       <source src="@/assets/FeatherBackground.mp4" type="video/mp4">
     </video>
     

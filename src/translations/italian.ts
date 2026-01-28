@@ -147,7 +147,7 @@ export default {
       flyerLabel: 'LOCANDINA',
       moreInfo: 'Maggiori info',
       course1: {
-        date: '17-18 Ott 2025',
+        date: '2026',
         name: 'Corso di riflessologia plantare organica',
         location: 'Rivalta di Torino',
         teachers: 'Docente Monica Giglio',
@@ -155,7 +155,7 @@ export default {
         duration: '2 incontri',
       },
       course2: {
-        date: '19 Ott 2025',
+        date: '15 Mar 2026',
         name: 'Corso di tecnica metamorfica ',
         location: 'Rivalta di Torino',
         teachers: 'Docente Monica Giglio',
@@ -179,7 +179,7 @@ export default {
       title: 'CONTATTI',
       h3: 'Se ti trovi qui, il tuo viaggio è già iniziato. Qualunque sia il motivo, sono felice di accompagnarti nella tua trasformazione.',
       follow: 'SEGUIMI',
-      allRightsReserved: '© 2025 Monica Giglio. Tutti i diritti riservati.'
+      allRightsReserved: '© 2026 Monica Giglio. Tutti i diritti riservati.'
     },
     aria: {
       ariaLabelMoreinfo: "Visita questa pagina per maggiori info",

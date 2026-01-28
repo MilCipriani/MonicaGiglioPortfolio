@@ -40,7 +40,7 @@ const items = computed(() =>[
 
 <template>
     <div class="card">
-        <Menubar :model="items">
+        <Menubar :model="items" style="padding-left: 2rem; padding-right: 2rem;">
             <template #start>
                 <a class="start" href="#" >
                     <img :src="logo" alt="Logo" style="width: 5rem; height: 5rem;"/>
@@ -99,7 +99,6 @@ const items = computed(() =>[
     padding: 0 1rem;
     border-radius: 0;
     border: none;
-    border-bottom: 1px solid #14508936;
 }
 
 :deep(.p-menubar){

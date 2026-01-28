@@ -147,7 +147,7 @@ export default {
       flyerLabel: 'CARTEL',
       moreInfo: 'Más info',
       course1: {
-        date: '17-18 Oct 2025',
+        date: '2026',
         name: 'Curso de reflexología podal orgánica',
         location: 'Rivalta di Torino',
         teachers: 'Docente Monica Giglio',
@@ -155,7 +155,7 @@ export default {
         duration: '2 encuentros',
       },
       course2: {
-        date: '19 Oct 2025',
+        date: '15 Mar 2026',
         name: 'Curso de Técnica Metamórfica',
         location: 'Rivalta di Torino',
         teachers: 'Docente Monica Giglio',
@@ -179,7 +179,7 @@ export default {
       title: 'CONTACTO',
       h3: 'Si estás aquí, tu viaje ya ha comenzado. Sea cual sea el motivo, estoy feliz de acompañarte en tu transformación.',
       follow: 'SÍGUEME',
-      allRightsReserved: '© 2025 Monica Giglio. Todos los derechos reservados.'
+      allRightsReserved: '© 2026 Monica Giglio. Todos los derechos reservados.'
     },
     aria: {
       ariaLabelMoreinfo: "Visita esta página para más info",
