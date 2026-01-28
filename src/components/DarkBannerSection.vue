@@ -13,6 +13,7 @@ const { t } = useLanguage();
       loop
       playsinline
     >
+      <source src="@/assets/skyC.webm" type="video/webm">
       <source src="@/assets/skyC.mp4" type="video/mp4">
     </video>
     
