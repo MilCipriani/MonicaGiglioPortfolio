@@ -9,6 +9,7 @@ import Damaschi from '@/assets/Damaschi.jpg';
 import Casano from '@/assets/Casano.jpg';
 import Zocca from '@/assets/Zocca.jpg';
 import Bianchini from '@/assets/Bianchini.jpeg';
+import Locarini from '@/assets/Locarini.jpg';
 import { useLanguage } from '@/translations/index';
 
 const { t } = useLanguage();
@@ -71,6 +72,12 @@ const products = computed( () =>[
         alt: t('sections.collabSection.collab6.alt'),
         text: t('sections.collabSection.collab6.text'),
         link: 'https://www.instagram.com/danielebianchini_atwellness/'
+    },
+    {
+        name: "Aessandra Locarini",
+        image: Locarini,
+        alt: t('sections.collabSection.collab8.alt'),
+        text: t('sections.collabSection.collab8.text'),
     },
 ]);
 
