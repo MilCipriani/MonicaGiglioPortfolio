@@ -163,7 +163,7 @@ export default {
         duration: '4 ore'
       },
       course3: {
-        date: '25 - 26 Apr 2026',
+        date: 'Ottobre 2026',
         name: 'Corso Volare Oltre',
         location: 'Treviso',
         teachers: 'Docenti Monica Giglio, Prisca Zocca e Gloria Damaschi',
