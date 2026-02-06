@@ -140,7 +140,12 @@ export default {
         name: "Daniele Bianchini",
         text: "Preparatore Fisico e dottore in scienze motorie e sportive. Preparatore Fisico Nazionale presso la FIP, dal 2017 si occupa del Wellness per finalità non agonistiche, con sedute e percorsi One to One.",
         alt: 'Foto di Daniele Bianchini'
-      }
+      },
+      collab8: {
+        name: "Alessandra Locarini",
+        text: "Mental Coach Professionista e Facilitatrice in Costellazioni Familiari. Formata in Counseling Relazionale e Coaching basato sulla Programmazione Neuro-Linguistica.",
+        alt: 'Foto di Alessandra Locarini'
+      },
     },
     coursesSection: {
       title: 'CORSI IN PROGRAMMAZIONE',
