@@ -163,7 +163,7 @@ export default {
         duration: '4 horas'
       },
       course3: {
-        date: '25 - 26 Abr 2026',
+        date: 'Octubre 2026',
         name: 'Curso Volar Más Allá',
         location: 'Treviso',
         teachers: 'Docentes Monica Giglio, Prisca Zocca y Gloria Damaschi',
