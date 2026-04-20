@@ -44,7 +44,7 @@ export default {
       },
       milestone5: {
         h1: 'Colaboraciones y reconocimientos',
-        p: 'Con el paso de los años comencé a colaborar con médicos y profesionales de las terapias holísticas entre Italia y España. Desde 2022 formo parte del equipo de la Dra. Monica Greco como Coach A.M.A., y desde 2024 soy docente en su Academia de Naturopatía Científica del Terreno. En 2023, con la acreditación en la Asociación Profesional Española de Naturopatía y Bioterapia, nace oficialmente el Centro de Formación In Lumine.',
+        p: 'Con el paso de los años comencé a colaborar con médicos y profesionales de las terapias holísticas entre Italia y España. Desde 2022 formo parte del equipo de la Dra. Monica Greco como Coach A.M.A., y desde 2024 soy docente en su Academia de Naturopatía Científica del Terreno. Desde 2025 formo parte del equipo de la Dra. Katya Wulhfard. En 2023, con la acreditación en la Asociación Profesional Española de Naturopatía y Bioterapia, nace oficialmente el Centro de Formación In Lumine.',
         alt: 'Monica con su colaboradora, la Dra. Greco'
       },
       milestone6: {

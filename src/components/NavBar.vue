@@ -78,6 +78,7 @@ const items = computed(() =>[
     width: 1.2rem;
     height: 1.2rem;
     margin-right: 0.2rem;
+    cursor: pointer;
 }
 
 :deep(.p-menubar-root-list){
