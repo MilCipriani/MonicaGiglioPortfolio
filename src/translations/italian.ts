@@ -14,7 +14,7 @@ export default {
     aboutSection: {
         title: 'CHI SONO',
         h2: 'Sono Monica Giglio e mi occupo di naturopatia e discipline olistiche da circa 25 anni.',
-        p: 'Il mio obiettivo é quello di accompagnare attraverso il benessere olistico, la trasformazione personale e l’evoluzione interiore.',
+        p: 'Il mio obiettivo è quello di accompagnare attraverso il benessere olistico, la trasformazione personale e l’evoluzione interiore.',
         p2: 'Sono guidata da una profonda passione per l’equilibrio e la connessione tra mente, corpo e spirito.',
         alt: 'Ritratto di Monica',
         button: 'SCARICA IL MIO CV',
@@ -44,7 +44,7 @@ export default {
       },
       milestone5: {
         h1: 'Collaborazioni e riconoscimenti',
-        p: 'Negli anni, inizio a collaborare con medici e professionisti delle terapie olistiche tra Italia e Spagna. Dal 2022 faccio parte del team della Dott.ssa Monica Greco come Coach A.M.A. e dal 2024 sono docente presso la sua Accademia di Naturopatia Scientifica del Terreno. Nel 2023, con l’accreditamento all’Associazione Professionale Spagnola di Naturopatia e Bioterapia, nasce ufficialmente il Centro di Formazione In Lumine.',
+        p: 'Negli anni, inizio a collaborare con medici e professionisti delle terapie olistiche tra Italia e Spagna. Dal 2022 faccio parte del team della Dott.ssa Monica Greco come Coach A.M.A. e dal 2024 sono docente presso la sua Accademia di Naturopatia Scientifica del Terreno. Dal 2025 faccio parte del team della Dott.ssa Katya Wulhfard. Nel 2023, con l’accreditamento all’Associazione Professionale Spagnola di Naturopatia e Bioterapia, nasce ufficialmente il Centro di Formazione In Lumine.',
         alt: 'Monica con la collaboratrice Dott.ssa Greco'
       },
       milestone6: {
