@@ -160,9 +160,9 @@ export default {
         duration: '2 incontri',
       },
       course2: {
-        date: '15 Mar 2026',
+        date: '25 Set 2026',
         name: 'Corso di tecnica metamorfica ',
-        location: 'Rivalta di Torino',
+        location: 'Verona',
         teachers: 'Docente Monica Giglio',
         text: 'Si complementa perfettamente con le terapie di medicina classica sia con i trattamenti di medicina olistica.',
         duration: '4 ore'

@@ -160,9 +160,9 @@ export default {
         duration: '2 encuentros',
       },
       course2: {
-        date: '15 Mar 2026',
+        date: '25 Sept 2026',
         name: 'Curso de Técnica Metamórfica',
-        location: 'Rivalta di Torino',
+        location: 'Verona',
         teachers: 'Docente Monica Giglio',
         text: 'Se complementa perfectamente con terapias de la medicina clásica así como con tratamientos de medicina holística.',
         duration: '4 horas'
